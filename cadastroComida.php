@@ -25,7 +25,7 @@
                 <li class="nav-item dropdown"><a class="dropdown-toggle nav-link active" data-toggle="dropdown"
                         aria-expanded="false" href="#">Cadastrar Produto </a>
                     <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation"
-                            href="consultaProdutos.html">Consultar Produtos</a>
+                            href="consultaProdutos.php">Consultar Produtos</a>
                 </li>
             </ul>
     </nav>
@@ -43,18 +43,18 @@
                     <div class="input-group mt-2 mb-3">
                         <div class="input-group">
                             <button class="btn btn-outline-secondary dropdown-toggle" type="button"
-                                data-toggle="dropdown" aria-haspopup="true">Bebida</button>
+                                data-toggle="dropdown" aria-haspopup="true">Comida</button>
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="cadastroComida.html">Comida</a>
+                                <a class="dropdown-item" href="cadastroBebida.php">Bebida</a>
 
                             </div>
                         </div>
 
                     </div>
                     <form>
-                        <div class="form-group"><label for="usrname">Nome da Bebida:</label><input class="form-control"
+                        <div class="form-group"><label for="usrname">Nome da Comida:</label><input class="form-control"
                                 type="email" id="email" /></div>
-                        <div class="form-group"><label for="email">Fornecedor da Bebida:</label><input
+                        <div class="form-group"><label for="email">Descrição da Comida:</label><input
                                 class="form-control" type="email" id="email" /></div>
                         <div class="input-group">
                             <label for="preco">Preço R$</span>

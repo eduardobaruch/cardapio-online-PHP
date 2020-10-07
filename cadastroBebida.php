@@ -25,7 +25,7 @@
                 <li class="nav-item dropdown"><a class="dropdown-toggle nav-link active" data-toggle="dropdown"
                         aria-expanded="false" href="#">Cadastrar Produto </a>
                     <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation"
-                            href="consultaProdutos.html">Consultar Produtos</a>
+                            href="consultaProdutos.php">Consultar Produtos</a>
                 </li>
             </ul>
     </nav>
@@ -43,28 +43,28 @@
                     <div class="input-group mt-2 mb-3">
                         <div class="input-group">
                             <button class="btn btn-outline-secondary dropdown-toggle" type="button"
-                                data-toggle="dropdown" aria-haspopup="true">Comida</button>
+                                data-toggle="dropdown" aria-haspopup="true">Bebida</button>
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="cadastroBebida.html">Bebida</a>
+                                <a class="dropdown-item" href="cadastroComida.php">Comida</a>
 
                             </div>
                         </div>
 
                     </div>
-                    <form>
-                        <div class="form-group"><label for="usrname">Nome da Comida:</label><input class="form-control"
-                                type="email" id="email" /></div>
-                        <div class="form-group"><label for="email">Descrição da Comida:</label><input
-                                class="form-control" type="email" id="email" /></div>
+                    <form method="POST" action="Controller/bebidas.php">
+                        <div class="form-group"><label for="usrname">Nome da Bebida:</label><input class="form-control"
+                                type="text" id="nome" name="nome" /></div>
+                        <div class="form-group"><label for="email">Fornecedor da Bebida:</label><input
+                                class="form-control" type="text" id="fornecedor" name="fornecedor"/></div>
                         <div class="input-group">
                             <label for="preco">Preço R$</span>
                                 <input type="number" value="0.00" min="0" step="0.01" data-number-to-fixed="2"
-                                    data-number-stepfactor="100" class="form-control currency" id="c2" />
+                                    data-number-stepfactor="100" class="form-control currency" id="c2" name="preco"/>
                         </div>
                         <div class="container">
                             <div class="row justify-content-md-center">
                                 <div class="col-md-4 button">
-                                    <button type="button" class="btn btn-warning btn-block mt-1 mb-3">Cadastrar</button>
+                                    <button type="submit" class="btn btn-warning btn-block mt-1 mb-3">Cadastrar</button>
                                 </div>
                             </div>
                         </div>

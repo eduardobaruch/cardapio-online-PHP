@@ -31,7 +31,7 @@
                 <li class="nav-item dropdown"><a class="dropdown-toggle nav-link active" data-toggle="dropdown"
                         aria-expanded="false" href="#">Cadastrar Produto </a>
                     <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation"
-                            href="consultaProdutos.html">Consultar Produtos</a>
+                            href="consultaProdutos.php">Consultar Produtos</a>
                 </li>
             </ul>
     </nav>
@@ -51,7 +51,7 @@
                             <button class="btn btn-outline-secondary dropdown-toggle" type="button"
                                 data-toggle="dropdown" aria-haspopup="true">Bebida</button>
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="cadastroComida.html">Comida</a>
+                                <a class="dropdown-item" href="cadastroComida.php">Comida</a>
 
                             </div>
                         </div>
