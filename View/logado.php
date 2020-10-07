@@ -1,6 +1,4 @@
 <?php
-    require_once 'Model/usuarios.php';
-    $u = new Usuario;
   
 
 ?>
@@ -38,11 +36,11 @@
     <link rel="icon" href="imagens/icon.png">
 </head>
 
-<body background="imagens/hamburgerbg.jpg" style="padding-bottom: 70px;">
+<body background="../imagens/hamburgerbg.jpg" style="padding-bottom: 70px;">
     <!--NAVBAR-->
     <nav class="navbar navbar-light navbar-expand-md navigation-clean-button bg-warning">
         <!--LOGO-->
-        <div class="container"><a class="navbar-brand" href="logado.html"><img src="imagens/logo.png" alt="logo"
+        <div class="container"><a class="navbar-brand" href="logado.html"><img src="../imagens/logo.png" alt="logo"
                     width="268" height="62"></a>
             <!--MENU--> 
             <ul class="nav navbar-nav mr-auto justify-content-end">
@@ -55,7 +53,7 @@
             </ul>
             <!--USUARIO-->
             <span class="">Olá, <u><strong><?php echo $_SESSION['nome'] ?></strong> </u> <br>Você possui <?php echo $_SESSION['bonus'] ?> pontos.</span><img class="border rounded-circle img-profile" src="https://cdn.icon-icons.com/icons2/108/PNG/256/females_female_avatar_woman_people_faces_18384.png" width="50"/>
-            <a class="text-body" href="Controller/sair.php"><strong>Sair</strong> </a>
+            <a class="text-body" href="../Controller/sair.php"><strong>Sair</strong> </a>
         </div>
         
     </nav>

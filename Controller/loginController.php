@@ -16,7 +16,7 @@ $resposta = $novologin->logar($cpf, $senha);
     
 
 if($resposta) {
-    header("location: ../logado.php");
+    header("location: ../View/logado.php");
 }
 else {
     echo  "<script>alert('CPF e/ou senha incorretos!');</script>";
