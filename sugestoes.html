@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- LINK PARA ICONS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <title>EVA Lanches</title>
+    <link rel="icon" href="imagens/icon.png">
+
+    <script>
+        function validarLogin() {
+            
+            var s1 = document.forms["formLogin"]["cpf"].value;
+          var s2 = document.forms["formLogin"]["password"].value;
+          
+             if (s1 === '123' && s2 === 'anamaria') {
+                return true;
+            }
+            else {
+                alert ("Cpf ou senha incorretos");
+                return false;
+            }
+      }
+        
+    </script>
+</head>
+
+<body background="imagens/hamburgerbg.jpg" style="padding-bottom: 70px;">
+
+    <nav class="navbar navbar-light navbar-expand-md navigation-clean-button bg-warning">
+        <div class="container"><a class="navbar-brand" href="index.html"><img src="imagens/logo.png" alt="logo"
+                    width="268" height="62"></a>
+
+            <ul class="nav navbar-nav mr-auto justify-content-end">
+                <li class="nav-item dropdown"><a class="dropdown-toggle nav-link active" data-toggle="dropdown"
+                        aria-expanded="false" href="#">Sugestões </a>
+                    <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation"
+                            href="index.html">Cardápio</a><a class="dropdown-item" role="presentation"
+                            href="sobre.html">Sobre</a>
+                </li>
+            </ul><span class="navbar-text actions"> <a class="login" data-toggle="modal" data-target="#modalLogIn"
+                    href="#" style="margin: 16px;">Login</a><a class="btn btn-light action-button" data-toggle="modal"
+                    data-target="#modalCadastro" role="button" href="#">Cadastrar</a></span>
+        </div>
+        <!--Botoes de log in-->
+        <!-- The Modal -->
+        <div class="modal" id="modalLogIn">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Informações de Login</h4>
+                        <button type="button" class="close" data-dismiss="modal">×</button>
+                    </div>
+
+                  <!-- MODAL BODY -->
+                  <div class="modal-body">
+                    <form action="sugestoeslogado.html" name="formLogin" onsubmit="return validarLogin();">
+                        <!-- CPF -->
+                        <div class="form-group">
+                        <label class="sr-only" for="cpf">cpf</label>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1">
+                                    <i class="fa fa-hashtag"></i></span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="CPF" name="cpf" id="cpf">
+                        </div></div>
+                        <!-- SENHA -->
+                        <label class="sr-only" for="Password">senha</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon2">
+                                    <i class="fa fa-key"></i></span>
+                            </div>
+                            <input id="password" type="password" class="form-control" placeholder="Senha" name="password">
+                        </div>
+                    
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary">Pronto</button>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!--Botoes de CADASTRO-->
+        <!-- Modal -->
+        <div class="modal" id="modalCadastro">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Informações de Cadastro</h4>
+                        <button type="button" class="close" data-dismiss="modal">×</button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <form>
+                            <label class="sr-only" for="usrname">Username</label>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1"><i class="fa fa-user"></i></span>
+                                </div>
+                                <input type="text" class="form-control" placeholder="Nome Completo"
+                                    aria-label="Username" aria-describedby="basic-addon1">
+                            </div>
+
+                            <label class="sr-only" for="cpf">cpf</label>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1"><i
+                                            class="fa fa-hashtag"></i></span>
+                                </div>
+                                <input type="text" class="form-control" placeholder="CPF" aria-label="Username"
+                                    aria-describedby="basic-addon1">
+                            </div>
+
+                            <label class="sr-only" for="email">email</label>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1"><i
+                                            class="fa fa-envelope"></i></span>
+                                </div>
+                                <input type="text" class="form-control" placeholder="Email" aria-label="Username"
+                                    aria-describedby="basic-addon1">
+                            </div>
+
+
+
+
+                            <label class="sr-only" for="Password">Name</label>
+                            <div class="input-group mb-2">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon2"><i class="fa fa-key"></i></span>
+                                </div>
+                                <input id="Password" type="password" class="form-control" placeholder="Senha"
+                                    aria-label="Password" aria-describedby="basic-addon2">
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary">Pronto</button>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+    </nav>
+
+
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col-md-12">
+
+                <!-- COMIDAS -->
+                <div class="card bg-warning text-white card-body">FALE COM O DONO</div>
+
+                <!-- FORMULARIO -->
+                <div class="container card bg-light mt-1">
+                    <form class="mt-2" action="" method="POST" name="sugestao">
+                        <div class="form-group">
+                            <label for="nome">Nome</label>
+                            <input class="form-control" type="text" id="nome" name="nome" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input class="form-control" type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="mensagem">Mensagem</label>
+                            <textarea class="form-control" type="text" id="mensagem" name="mensagem" required></textarea>
+                        </div>
+
+                        
+                            <div class="row justify-content-md-center">
+                                <div class="col-md-4 button">
+                                    <button type="submit" class="btn btn-warning btn-block mt-1 mb-3">Enviar</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    
+    <!-- Footer -->
+    <footer class="footer fixed-bottom font-small bg-warning mt-2">
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3 font-weight-bold">Criado por Eduardo, Victor e Alcyr. © 2020
+            Copyright: EVA Lanches</div>
+    </footer>
+
+
+</body>
+
+</html>

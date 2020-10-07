@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- LINK PARA ICONS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <title>EVA Lanches</title>
+    <link rel="icon" href="imagens/icon.png">
+</head>
+
+<body background="imagens/hamburgerbg.jpg" style="padding-bottom: 70px;">
+
+    <nav class="navbar navbar-light navbar-expand-md navigation-clean-button bg-warning">
+        <div class="container"><a class="navbar-brand" href="logado.html"><img src="imagens/logo.png" alt="logo"
+                    width="268" height="62"></a>
+
+            <ul class="nav navbar-nav mr-auto justify-content-end">
+                <li class="nav-item dropdown"><a class="dropdown-toggle nav-link active" data-toggle="dropdown"
+                        aria-expanded="false" href="#">Sugestões </a>
+                    <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation"
+                            href="logado.html">Cardápio</a><a class="dropdown-item" role="presentation"
+                            href="sobrelogado.html">Sobre</a>
+                </li>
+            </ul><span class="">Olá, <u><strong>Ana Maria!</strong> </u> <br>Você possui 0 pontos.</span><img class="border rounded-circle img-profile" src="https://cdn.icon-icons.com/icons2/108/PNG/256/females_female_avatar_woman_people_faces_18384.png" width="50"/>
+            <a class="text-body" href="sugestoes.html"><strong>Sair</strong> </a>
+        </div>
+        
+
+
+    </nav>
+
+
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col-md-12">
+
+                <!-- COMIDAS -->
+                <div class="card bg-warning text-white card-body">FALE COM O DONO</div>
+
+                <!-- FORMULARIO -->
+                <div class="container card bg-light mt-1">
+                    <form class="mt-2" action="" method="POST" name="sugestao">
+                        <div class="form-group">
+                            <label for="nome">Nome</label>
+                            <input class="form-control" type="text" id="nome" name="nome" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input class="form-control" type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="mensagem">Mensagem</label>
+                            <textarea class="form-control" type="text" id="mensagem" name="mensagem" required></textarea>
+                        </div>
+
+                        
+                            <div class="row justify-content-md-center">
+                                <div class="col-md-4 button">
+                                    <button type="submit" class="btn btn-warning btn-block mt-1 mb-3">Enviar</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    
+    <!-- Footer -->
+    <footer class="footer fixed-bottom font-small bg-warning mt-2">
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3 font-weight-bold">Criado por Eduardo, Victor e Alcyr. © 2020
+            Copyright: EVA Lanches</div>
+    </footer>
+
+
+</body>
+
+</html>
