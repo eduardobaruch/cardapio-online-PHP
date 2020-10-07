@@ -2,6 +2,7 @@
 
 require_once "clienteDAO.php";
 
+
 class Cliente{
     private $nome;
     private $cpf;
@@ -57,9 +58,9 @@ class Cliente{
         return $novoCliente->incluir($this);
     }
 
-    public function logar(){
+    public function logar($cpf, $senha){
         $novoCliente = new clienteDAO();
-        return $novoCliente->logar($this);
+        return $novoCliente->logar($cpf, $senha);
     }
 
 }

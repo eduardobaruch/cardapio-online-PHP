@@ -9,21 +9,18 @@ require_once "../Model/cliente.php";
 
 //Verificando se todos os campos estao preenchidos
 if(!empty($cpf) && !empty($senha)) {
-    $novologin = new Cliente(0, 0, 0, 0);
-$novologin->setCpf = $cpf;
-$novologin->setSenha = $senha;
+    $novologin = new Cliente(0, $cpf, 0, $senha);
+    
+    
+$resposta = $novologin->logar($cpf, $senha);
+    
 
-
-
-$resposta = $novoCliente->logar();
-
-if($resposta > 0) {
-        echo "<script language=javascript>alert( 'Cadastrado com sucesso!' );</script>";
-        echo '<script type="text/javascript">window.location.href = "../index.php";</script>';
+if($resposta) {
+    header("location: ../logado.php");
 }
 else {
-        echo "<script language=javascript>alert( 'CPF ja cadastrado!' );</script>";
-        echo '<script type="text/javascript">window.location.href = "../index.php";</script>';
+    echo  "<script>alert('CPF e/ou senha incorretos!');</script>";
+    echo '<script type="text/javascript">window.location.href = "../index.php";</script>';
 }
 }
 else {
