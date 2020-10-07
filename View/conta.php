@@ -15,26 +15,22 @@
     <link rel="icon" href="imagens/icon.png">
 </head>
 
-<body background="imagens/hamburgerbg.jpg" style="padding-bottom: 70px;">
+<body background="../imagens/hamburgerbg.jpg" style="padding-bottom: 70px;">
 
-    <nav class="navbar navbar-light navbar-expand-md navigation-clean-button bg-warning">
-        <div class="container"><a class="navbar-brand" href="logado.html"><img src="imagens/logo.png" alt="logo"
-                    width="268" height="62"></a>
-
-            <ul class="nav navbar-nav mr-auto justify-content-end">
-                <li class=""><a class="" data-toggle=""
-                        aria-expanded="false" href="#"> </a>
-                    <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation"
-                            href="logado.html"></a><a class="dropdown-item" role="presentation"
-                            href="sobrelogado.html"></a>
-                </li>
-            </ul><span class="">Olá, <u><strong>Ana Maria!</strong> </u> <br>Você possui 0 pontos.</span><img class="border rounded-circle img-profile" src="https://cdn.icon-icons.com/icons2/108/PNG/256/females_female_avatar_woman_people_faces_18384.png" width="50"/>
-            <a class="text-body" href="index.html"><strong>Sair</strong> </a>
-        </div>
+   <!-- NAVBAR -->
+   <?php
+    session_start();
+    if(!isset($_SESSION['id_usuario']))
+    {
+       include ('template/menu.php');
         
-
-
-    </nav>
+    }
+    else 
+    {
+        include ('template/menuLogado.php');
+    }
+        
+?>
 
 
     <div class="container mt-3">
@@ -113,7 +109,7 @@
                                     <button type="button" class="btn btn-warning btn-block mt-1 mb-3"><a class="text-body" href="logado.html">Voltar para cardápio</a></button>
                                 </div>
                                 <div class="col-md-4 button">
-                                    <button onclick="alert('Conta paga! Obrigado pela sua visita, volte sempre!')" class="btn btn-warning btn-block mt-1 mb-3"><a class="text-body" href="index.html">Pagar conta</a></button>
+                                    <button onclick="alert('Conta paga! Obrigado pela sua visita, volte sempre!')" class="btn btn-warning btn-block mt-1 mb-3"><a class="text-body" href="../Controller/sair.php">Pagar conta</a></button>
                                 </div>
                             </div>
                         </div>

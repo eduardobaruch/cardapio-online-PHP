@@ -32,138 +32,21 @@
     </script>
 </head>
 
-<body background="imagens/hamburgerbg.jpg" style="padding-bottom: 70px;">
-
-    <nav class="navbar navbar-light navbar-expand-md navigation-clean-button bg-warning">
-        <div class="container"><a class="navbar-brand" href="index.html"><img src="imagens/logo.png" alt="logo"
-                    width="268" height="62"></a>
-
-            <ul class="nav navbar-nav mr-auto justify-content-end">
-                <li class="nav-item dropdown"><a class="dropdown-toggle nav-link active" data-toggle="dropdown"
-                        aria-expanded="false" href="#">Sobre </a>
-                    <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation"
-                            href="index.html">Cardápio</a><a class="dropdown-item" role="presentation"
-                            href="sugestoes.html">Sugestões</a>
-                </li>
-            </ul><span class="navbar-text actions"> <a class="login" data-toggle="modal" data-target="#modalLogIn"
-                    href="#" style="margin: 16px;">Login</a><a class="btn btn-light action-button" data-toggle="modal"
-                    data-target="#modalCadastro" role="button" href="#">Cadastrar</a></span>
-        </div>
-        <!--Botoes de log in-->
-        <!-- The Modal -->
-        <div class="modal" id="modalLogIn">
-            <div class="modal-dialog">
-                <div class="modal-content">
-
-                    <!-- Modal Header -->
-                    <div class="modal-header">
-                        <h4 class="modal-title">Informações de Log In</h4>
-                        <button type="button" class="close" data-dismiss="modal">×</button>
-                    </div>
-
-                     <!-- MODAL BODY -->
-                     <div class="modal-body">
-                        <form action="sobrelogado.html" name="formLogin" onsubmit="return validarLogin();">
-                            <!-- CPF -->
-                            <div class="form-group">
-                            <label class="sr-only" for="cpf">cpf</label>
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text" id="basic-addon1">
-                                        <i class="fa fa-hashtag"></i></span>
-                                </div>
-                                <input type="text" class="form-control" placeholder="CPF" name="cpf" id="cpf">
-                            </div></div>
-                            <!-- SENHA -->
-                            <label class="sr-only" for="Password">senha</label>
-                            <div class="input-group mb-2">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text" id="basic-addon2">
-                                        <i class="fa fa-key"></i></span>
-                                </div>
-                                <input id="password" type="password" class="form-control" placeholder="Senha" name="password">
-                            </div>
-
-                    <!-- Modal footer -->
-                    <div class="modal-footer">
-                        <button type="submit" class="btn btn-primary">Pronto</button>
-                        <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-
-        <!--Botoes de CADASTRO-->
-        <!-- Modal -->
-        <div class="modal" id="modalCadastro">
-            <div class="modal-dialog">
-                <div class="modal-content">
-
-                    <!-- Modal Header -->
-                    <div class="modal-header">
-                        <h4 class="modal-title">Informações de Cadastro</h4>
-                        <button type="button" class="close" data-dismiss="modal">×</button>
-                    </div>
-
-                    <!-- Modal body -->
-                    <div class="modal-body">
-                        <form>
-                            <label class="sr-only" for="usrname">Username</label>
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text" id="basic-addon1"><i class="fa fa-user"></i></span>
-                                </div>
-                                <input type="text" class="form-control" placeholder="Nome Completo"
-                                    aria-label="Username" aria-describedby="basic-addon1">
-                            </div>
-
-                            <label class="sr-only" for="cpf">cpf</label>
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text" id="basic-addon1"><i
-                                            class="fa fa-hashtag"></i></span>
-                                </div>
-                                <input type="text" class="form-control" placeholder="CPF" aria-label="Username"
-                                    aria-describedby="basic-addon1">
-                            </div>
-
-                            <label class="sr-only" for="email">email</label>
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text" id="basic-addon1"><i
-                                            class="fa fa-envelope"></i></span>
-                                </div>
-                                <input type="text" class="form-control" placeholder="Email" aria-label="Username"
-                                    aria-describedby="basic-addon1">
-                            </div>
-
-
-
-
-                            <label class="sr-only" for="Password">Name</label>
-                            <div class="input-group mb-2">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text" id="basic-addon2"><i class="fa fa-key"></i></span>
-                                </div>
-                                <input id="Password" type="password" class="form-control" placeholder="Senha"
-                                    aria-label="Password" aria-describedby="basic-addon2">
-                            </div>
-                        </form>
-                    </div>
-
-                    <!-- Modal footer -->
-                    <div class="modal-footer">
-                        <button type="submit" class="btn btn-primary">Pronto</button>
-                        <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-
-
-    </nav>
+<body background="../imagens/hamburgerbg.jpg" style="padding-bottom: 70px;">
+  <!-- NAVBAR -->
+  <?php
+    session_start();
+    if(!isset($_SESSION['id_usuario']))
+    {
+       include ('template/menu.php');
+        
+    }
+    else 
+    {
+        include ('template/menuLogado.php');
+    }
+        
+?>
     <!-- CAROUSEL -->
     <div class="container mt-4">
         <div class="row">
@@ -180,10 +63,10 @@
         <!-- The slideshow -->
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img class="rounded" src="imagens/lanchonete1.jpg" alt="Los Angeles">
+            <img class="rounded" src="../imagens/lanchonete1.jpg" alt="Los Angeles">
           </div>
           <div class="carousel-item">
-            <img class="rounded" src="imagens/lanchonete3.jpg" alt="Chicago">
+            <img class="rounded" src="../imagens/lanchonete3.jpg" alt="Chicago">
           </div>
          
         </div>
@@ -221,19 +104,19 @@
                         nossas delícias levem nomes de linguagens de programação.</p>
                     <div class="row articles">
                         <div class="col-sm-6 col-md-4 item"><a href="#"><img class="img-fluid rounded"
-                                    src="imagens/cheeseburger3.jpg" /></a>
+                                    src="../imagens/cheeseburger3.jpg" /></a>
                             <h3 class="text-body">HTML</h3>
                             <p class="description">Mais conhecido como o grande devorador de fome, eleito o melhor pelo
                                 chef.</p>
                         </div>
                         <div class="col-sm-6 col-md-4 item"><a href="#"><img class="img-fluid rounded"
-                                    src="imagens/cheeseburger3.jpg" /></a>
+                                    src="../imagens/cheeseburger3.jpg" /></a>
                             <h3 class="text-body">PHP</h3>
                             <p class="description">Reconhecido pelo grande sabor do seu molho secreto, sucesso entre os
                                 clientes.</p>
                         </div>
                         <div class="col-sm-6 col-md-4 item"><a href="#"><img class="img-fluid rounded"
-                                    src="imagens/cheeseburger1.jpg" /></a>
+                                    src="../imagens/cheeseburger1.jpg" /></a>
                             <h3 class="text-body">Javascript</h3>
                             <p class="description">Para os apaixonados por bacon e queijo, podem pedir que não tem erro.
                             </p>
@@ -261,7 +144,7 @@
                 <div class="row justify-content-center">
                     <div class="col-sm-6 col-lg-4">
                         <div class="card clean-card text-center"><img class="card-img-top w-100 d-block"
-                                src="imagens/perfil.jpg" />
+                                src="../imagens/perfil.jpg" />
                             <div class="card-body info">
                                 <h4 class="card-title">Eduardo Baruch</h4>
                                 <p class="card-text text-muted">Especialista em HTML e na chapa dos grandes hamburguers.</p>
@@ -273,7 +156,7 @@
                     </div>
                     <div class="col-sm-6 col-lg-4">
                         <div class="card clean-card text-center"><img class="card-img-top w-100 d-block"
-                                src="imagens/victor.jpg" />
+                                src="../imagens/victor.jpg" />
                             <div class="card-body info">
                                 <h4 class="card-title">Victor Camargo</h4>
                                 <p class="card-text text-muted">CSS e Bootstrap não é problema, faz o milkshake como ninguém.</p>
@@ -285,7 +168,7 @@
                     </div>
                     <div class="col-sm-6 col-lg-4">
                         <div class="card clean-card text-center"><img class="card-img-top w-100 d-block"
-                                src="imagens/acyr.jpg" />
+                                src="../imagens/acyr.jpg" />
                             <div class="card-body info">
                                 <h4 class="card-title">Acyr Felipe</h4>
                                 <p class="card-text text-muted">PHP e MySql ficaram fáceis, o grande Chef da cozinha .</p>
