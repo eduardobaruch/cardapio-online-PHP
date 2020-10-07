@@ -53,7 +53,7 @@
                 
                     <!-- MODAL BODY -->
                     <div class="modal-body">
-                        <form action="logar.php" method="POST" name="formLogin">
+                        <form action="Controller/logar.php" method="POST" name="formLogin">
                             <!-- CPF -->
                             <div class="form-group">
                             <label class="sr-only" for="cpf">cpf</label>
@@ -100,7 +100,7 @@
 
                     <!-- MODAL BODY -->
                     <div class="modal-body">
-                        <form method="POST" action="cadastrar.php">
+                        <form method="POST" action="Controller/cadastrar.php">
                             <label class="sr-only" for="usrname">Username</label>
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">

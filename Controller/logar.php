@@ -1,5 +1,5 @@
 <?php
-    require_once 'CLASSES/usuarios.php';
+    require_once '../Model/usuarios.php';
     $u = new Usuario;
 
 ?>
@@ -22,12 +22,12 @@ if (isset($_POST['cpf']))
            {
             
 
-                header("location: logado.php");
+                header("location: ../logado.php");
            }
            else
            {
             echo  "<script>alert('CPF e/ou senha incorretos!');</script>";
-            echo '<script type="text/javascript">window.location.href = "index.php";</script>';
+            echo '<script type="text/javascript">window.location.href = "../index.php";</script>';
            
 
            }
@@ -41,7 +41,7 @@ if (isset($_POST['cpf']))
     else
     {
         echo  "<script>alert('Preencha todos os campos!');</script>";
-        echo '<script type="text/javascript">window.location.href = "index.php";</script>';
+        echo '<script type="text/javascript">window.location.href = "../index.php";</script>';
     }
 }
 

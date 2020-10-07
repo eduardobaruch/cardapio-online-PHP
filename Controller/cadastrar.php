@@ -1,5 +1,5 @@
 <?php
-    require_once 'CLASSES/usuarios.php';
+    require_once '../Model/usuarios.php';
     $u = new Usuario;
 
 ?>
@@ -27,14 +27,14 @@ if (isset($_POST['nome']))
            if ($u->cadastrar($nome, $cpf, $email, $senha))
            {
             echo "<script language=javascript>alert( 'Cadastrado com sucesso!' );</script>";
-            echo '<script type="text/javascript">window.location.href = "index.php";</script>';
+            echo '<script type="text/javascript">window.location.href = "../index.php";</script>';
 
 
            }
            else
            {
             echo "<script language=javascript>alert( 'CPF ja cadastrado!' );</script>";
-            echo '<script type="text/javascript">window.location.href = "index.php";</script>';
+            echo '<script type="text/javascript">window.location.href = "../index.php";</script>';
 
            }
 
@@ -47,7 +47,7 @@ if (isset($_POST['nome']))
     else
     {
         echo "<script language=javascript>alert( 'Preencha todos os campos!' );</script>";
-            echo '<script type="text/javascript">window.location.href = "index.php";</script>';
+            echo '<script type="text/javascript">window.location.href = "../index.php";</script>';
     }
 }
 
