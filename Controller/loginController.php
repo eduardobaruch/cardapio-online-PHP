@@ -3,6 +3,7 @@
 
 require_once "../Model/cliente.php";
 
+
    
     $cpf = addslashes($_POST['cpf']);
     $senha = addslashes($_POST['senha']);
@@ -14,22 +15,22 @@ if(!empty($cpf) && !empty($senha)) {
     
 $resposta = $novologin->logar($cpf, $senha);
 
-if(($cpf == 'gerente') && ($senha == 'poderoso')) {
-    echo  "<script>alert('Logado como Gerente!');</script>";
-    header("location: ../View/cadastroComida.php");
-}
-elseif(($cpf == 'cozinha') && ($senha == 'evalanches')) {
-    echo  "<script>alert('Logado como Gerente!');</script>";
-    header("location: ../View/cozinha.php");
+if($resposta) {
+    $poder = $_SESSION['poder'];
+    if($poder == 2){
+        header("location: ../View/cadastrocomida.php");
+    }
+    elseif($poder == 1){
+        header("location: ../View/cozinha.php");
+    }
+    else {
+        header("location: ../View/logado.php");       
+    }
 }
 
-elseif($resposta) {
-    
-    header("location: ../View/logado.php");
-}
 else {
     echo  "<script>alert('CPF e/ou senha incorretos!');</script>";
-    echo '<script type="text/javascript">window.location.href = "../index.php";</script>';
+    echo '<script type="text/javascript">window.location.href = "../view/index.php";</script>';
 }
 }
 else {

@@ -9,6 +9,7 @@ class Cliente{
     private $email;
     private $bonus;
     private $senha;
+    private $poder;
 
     public function __construct($nome, $cpf, $email, $senha)
     {

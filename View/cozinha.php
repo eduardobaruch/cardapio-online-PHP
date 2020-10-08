@@ -1,8 +1,8 @@
 <?php
     session_start();
-    if(!isset($_SESSION['poder']))
+    if($_SESSION['poder'] < 1)
     {
-        header("location: index.php");
+        header("location: ../Controller/sair.php");
         exit;
     }
     else 
