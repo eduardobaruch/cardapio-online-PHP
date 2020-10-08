@@ -1,3 +1,17 @@
+<?php
+    session_start();
+    if($_SESSION['poder'] < 2)
+    {
+        header("location: ../Controller/sair.php");
+        exit;
+    }
+    else 
+    {
+        
+    }
+        
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -12,22 +26,23 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
         integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <title>EVA Lanches</title>
-    <link rel="icon" href="imagens/icon.png">
+    <link rel="icon" href="../imagens/icon.png">
 </head>
 
-<body background="imagens/hamburgerbg.jpg" style="padding-bottom: 70px;">
+<body background="../imagens/hamburgerbg.jpg" style="padding-bottom: 70px;">
 
 
     <nav class="navbar navbar-light navbar-expand-md navigation-clean-button bg-warning">
-        <div class="container"><a class="navbar-brand" href="index.html"><img src="imagens/logo.png" alt="logo"
+        <div class="container"><a class="navbar-brand" href="index.html"><img src="../imagens/logo.png" alt="logo"
                     width="268" height="62"></a>
             <ul class="nav navbar-nav mr-auto justify-content-end">
                 <li class="nav-item dropdown"><a class="dropdown-toggle nav-link active" data-toggle="dropdown"
                         aria-expanded="false" href="#">Consultar Produtos</a>
                     <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation"
-                            href="cadastroComida.html">Cadastrar Produto</a>
+                            href="cadastroComida.php">Cadastrar Produto</a>
                 </li>
             </ul>
+            <a class="text-body" href="../Controller/sair.php"><strong>Sair</strong> </a>
     </nav>
 
 

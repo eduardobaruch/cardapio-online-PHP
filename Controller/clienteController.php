@@ -16,14 +16,14 @@ $resposta = $novoCliente->incluir();
 
 if($resposta > 0) {
         echo "<script language=javascript>alert( 'Cadastrado com sucesso!' );</script>";
-        echo '<script type="text/javascript">window.location.href = "../index.php";</script>';
+        echo '<script type="text/javascript">window.location.href = "../view/index.php";</script>';
 }
 else {
         echo "<script language=javascript>alert( 'CPF ja cadastrado!' );</script>";
-        echo '<script type="text/javascript">window.location.href = "../index.php";</script>';
+        echo '<script type="text/javascript">window.location.href = "../view/index.php";</script>';
 }
 }
 else {
     echo "<script language=javascript>alert( 'Preencha todos os campos!' );</script>";
-    echo '<script type="text/javascript">window.location.href = "../index.php";</script>';
+    echo '<script type="text/javascript">window.location.href = "../view/index.php";</script>';
 }

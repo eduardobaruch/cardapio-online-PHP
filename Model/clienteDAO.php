@@ -62,6 +62,7 @@ class ClienteDAO{
                 $_SESSION['nome'] = $linha['nome'];
                 $_SESSION['bonus'] = $linha['bonus'];
                 $_SESSION['cpf'] = $linha['cpf'];
+                $_SESSION['poder'] = $linha['poder'];
             }
            
           

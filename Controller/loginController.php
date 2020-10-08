@@ -13,9 +13,18 @@ if(!empty($cpf) && !empty($senha)) {
     
     
 $resposta = $novologin->logar($cpf, $senha);
-    
 
-if($resposta) {
+if(($cpf == 'gerente') && ($senha == 'poderoso')) {
+    echo  "<script>alert('Logado como Gerente!');</script>";
+    header("location: ../View/cadastroComida.php");
+}
+elseif(($cpf == 'cozinha') && ($senha == 'evalanches')) {
+    echo  "<script>alert('Logado como Gerente!');</script>";
+    header("location: ../View/cozinha.php");
+}
+
+elseif($resposta) {
+    
     header("location: ../View/logado.php");
 }
 else {
@@ -25,5 +34,5 @@ else {
 }
 else {
     echo "<script language=javascript>alert( 'Preencha todos os campos!' );</script>";
-    echo '<script type="text/javascript">window.location.href = "../index.php";</script>';
+    echo '<script type="text/javascript">window.location.href = "../view/index.php";</script>';
 }

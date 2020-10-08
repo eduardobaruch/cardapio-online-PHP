@@ -1,3 +1,17 @@
+<?php
+    session_start();
+    if(!isset($_SESSION['poder']))
+    {
+        header("location: index.php");
+        exit;
+    }
+    else 
+    {
+        
+    }
+        
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -12,10 +26,10 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
         integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <title>EVA Lanches - COZINHA</title>
-    <link rel="icon" href="imagens/icon.png">
+    <link rel="icon" href="../imagens/icon.png">
 </head>
 
-<body background="imagens/hamburgerbg.jpg" style="padding-bottom: 70px;">
+<body background="../imagens/hamburgerbg.jpg" style="padding-bottom: 70px;">
     <script type="text/javascript">
 
         $(document).ready(function () {
@@ -25,8 +39,9 @@
 
 
     <nav class="navbar navbar-light navbar-expand-md navigation-clean-button bg-warning">
-        <div class="container"><a class="navbar-brand" href="index.html"><img src="imagens/logo.png" alt="logo"
+        <div class="container"><a class="navbar-brand" href="index.html"><img src="../imagens/logo.png" alt="logo"
                     width="268" height="62"></a>
+                    <a class="text-body" href="../Controller/sair.php"><strong>Sair</strong> </a>
 
     </nav>
 
@@ -132,50 +147,7 @@
             Copyright: EVA Lanches</div>
     </footer>
 
-    <!--Botoes de login do GERENTE-->
-    <!-- Modal -->
-    <div class="modal" id="exemplomodal">
-        <div class="modal-dialog">
-            <div class="modal-content">
 
-                <!-- Modal Header -->
-                <div class="modal-header">
-                    <h4 class="modal-title">Área da Cozinha</h4>
-                    <button type="button" class="close" data-dismiss="modal">×</button>
-                </div>
-
-                <!-- Modal body -->
-                <div class="modal-body">
-                    <form>
-                        <label class="sr-only" for="usrname">Username</label>
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text" id="basic-addon1"><i class="fa fa-user"></i></span>
-                            </div>
-                            <input type="text" class="form-control" placeholder="Login" aria-label="Username"
-                                aria-describedby="basic-addon1">
-                        </div>
-
-
-                        <label class="sr-only" for="Password">Name</label>
-                        <div class="input-group mb-2">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text" id="basic-addon2"><i class="fa fa-key"></i></span>
-                            </div>
-                            <input id="Password" type="password" class="form-control" placeholder="Senha"
-                                aria-label="Password" aria-describedby="basic-addon2">
-                        </div>
-                    </form>
-                </div>
-
-                <!-- Modal footer -->
-                <div class="modal-footer">
-                    <button type="submit" class="btn btn-primary">Entrar</button>
-                </div>
-
-            </div>
-        </div>
-    </div>
 
 </body>
 

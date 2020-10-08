@@ -1,3 +1,17 @@
+<?php
+    session_start();
+    if($_SESSION['poder'] < 2)
+    {
+        header("location: ../Controller/sair.php");
+        exit;
+    }
+    else 
+    {
+        
+    }
+        
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -16,12 +30,6 @@
 </head>
 
 <body background="../imagens/hamburgerbg.jpg" style="padding-bottom: 70px;">
-    <script type="text/javascript">
-
-        $(document).ready(function () {
-            $('#exemplomodal').modal('show');
-        })
-    </script>
 
 
     <nav class="navbar navbar-light navbar-expand-md navigation-clean-button bg-warning">
@@ -34,6 +42,7 @@
                             href="consultaProdutos.php">Consultar Produtos</a>
                 </li>
             </ul>
+            <a class="text-body" href="../Controller/sair.php"><strong>Sair</strong> </a>
     </nav>
 
 
@@ -49,18 +58,18 @@
                     <div class="input-group mt-2 mb-3">
                         <div class="input-group">
                             <button class="btn btn-outline-secondary dropdown-toggle" type="button"
-                                data-toggle="dropdown" aria-haspopup="true">Bebida</button>
+                                data-toggle="dropdown" aria-haspopup="true">Comida</button>
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="cadastroComida.php">Comida</a>
+                                <a class="dropdown-item" href="cadastroBebida.php">Bebida</a>
 
                             </div>
                         </div>
 
                     </div>
                     <form>
-                        <div class="form-group"><label for="usrname">Nome da Bebida:</label><input class="form-control"
+                        <div class="form-group"><label for="usrname">Nome da Comida:</label><input class="form-control"
                                 type="email" id="email" /></div>
-                        <div class="form-group"><label for="email">Fornecedor da Bebida:</label><input
+                        <div class="form-group"><label for="email">Descrição da Comida:</label><input
                                 class="form-control" type="email" id="email" /></div>
                         <div class="input-group">
                             <label for="preco">Preço R$</span>
@@ -87,50 +96,6 @@
             Copyright: EVA Lanches</div>
     </footer>
 
-    <!--Botoes de login do GERENTE-->
-    <!-- Modal -->
-    <div class="modal" id="exemplomodal">
-        <div class="modal-dialog">
-            <div class="modal-content">
-
-                <!-- Modal Header -->
-                <div class="modal-header">
-                    <h4 class="modal-title">Área do Gerente</h4>
-                    <button type="button" class="close" data-dismiss="modal">×</button>
-                </div>
-
-                <!-- Modal body -->
-                <div class="modal-body">
-                    <form>
-                        <label class="sr-only" for="usrname">Username</label>
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text" id="basic-addon1"><i class="fa fa-user"></i></span>
-                            </div>
-                            <input type="text" class="form-control" placeholder="Login" aria-label="Username"
-                                aria-describedby="basic-addon1">
-                        </div>
-
-
-                        <label class="sr-only" for="Password">Name</label>
-                        <div class="input-group mb-2">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text" id="basic-addon2"><i class="fa fa-key"></i></span>
-                            </div>
-                            <input id="Password" type="password" class="form-control" placeholder="Senha"
-                                aria-label="Password" aria-describedby="basic-addon2">
-                        </div>
-                    </form>
-                </div>
-
-                <!-- Modal footer -->
-                <div class="modal-footer">
-                    <button type="submit" class="btn btn-primary">Entrar</button>
-                </div>
-
-            </div>
-        </div>
-    </div>
 
 </body>
 
