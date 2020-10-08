@@ -66,39 +66,7 @@ include ('template/menuLogado.php');
                     </div>
                 </div>
 
-                <!-- ITEM 2 COMIDA -->
-                <div class="container card bg-light mt-1">
-                    <div class="row">
-                        <div class="col-md-9">
-                            <h5 class="mt-1">Cheeseburguer PHP</h5>
-                            <h5 class="float-right my-auto text-right">R$9,90</h5>
-                            <ul>
-                                <li class="small">Pão branco, 180g de carne, queijo especial, molho picante.</li>
-                            </ul>
-                        </div>
-                        <div class="col-md-3 my-auto">
-                            <button type="button" class="btn btn-warning float-right">Eu Quero!</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- ITEM 3 COMIDA -->
-                <div class="container card bg-light mt-1">
-                    <div class="row">
-                        <div class="col-md-9">
-                            <h5 class="mt-1">Cheeseburguer Javascript</h5>
-                            <h5 class="float-right my-auto text-right">R$11,00</h5>
-                            <ul>
-                                <li class="small">Pão branco, 180g de carne, queijo especial, molho picante.</li>
-                            </ul>
-                        </div>
-                        <div class="col-md-3 my-auto">
-                            <button type="button" class="btn btn-warning float-right">Eu Quero!</button>
-                        </div>
-                    </div>
-                </div>
-
-
+               
 
 
                 <!-- BEBIDAS -->
@@ -121,40 +89,9 @@ include ('template/menuLogado.php');
                         </div>
                     </div>
                 </div>
-
-                <!-- ITEM 2 BEBIDA -->
-                <div class="container card bg-light mt-1">
-                    <div class="row">
-                        <div class="col-md-9">
-                            <h5 class="mt-1">Cerveja Skol</h5>
-                            <h5 class="float-right my-auto text-right">R$6,90</h5>
-                            <ul>
-                                <li class="small">Garrafa 600ml.</li>
-                            </ul>
-                        </div>
-                        <div class="col-md-3 my-auto">
-                            <button type="button" class="btn btn-warning float-right">Eu Quero!</button>
-                        </div>
-                    </div>
                 </div>
 
-                <!-- ITEM 3 BEBIDA -->
-                <div class="container card bg-light mt-1">
-                    <div class="row">
-                        <div class="col-md-9">
-                            <h5 class="mt-1">Água Mineral</h5>
-                            <h5 class="float-right my-auto text-right">R$2,80</h5>
-                            <ul>
-                                <li class="small">Garrafa 500ml.</li>
-                            </ul>
-                        </div>
-                        <div class="col-md-3 my-auto">
-                            <button type="button" class="btn btn-warning float-right">Eu Quero!</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-      
+               
 
             <!-- CARRINHO HEADER -->
             
@@ -186,7 +123,8 @@ include ('template/menuLogado.php');
                             <p>R$6,60 </p>
                         </div>
                     </div>
-                </div>
+                    </div>
+                
                 
                 
                 
@@ -194,18 +132,28 @@ include ('template/menuLogado.php');
 
                 <!-- CARRINHO TOTAL -->
                 <div class="container" style="background-color: #c9bfbf">
-                    <H6 class="mb-0 p-2">TOTAL DO PEDIDO <span class="float-right">R$17,00</span></H6>
+                <div class="row p-1">
+                        <div class="col-md-9">
+                            <h7 class="mt-1"><strong>TOTAL</strong> </h7>
+                            
+                        </div>
+                        <div class="col-md-3 my-auto">
+                            <strong>R$17,00 </strong>
+                        </div>
+                    </div>
+                    
                 </div>
 
                 <!-- CARRINHO PAGAMENTO -->
+                
                 <div class="container bg-light">
-                    <div class="row justify-content-center">
-                        <button type="button" class="btn btn-secondary mt-3 mb-3">FAZER PEDIDO</button>
-                        <button type="button" class="btn btn-success mt-3 mb-3 ml-2"><a href="conta.php"><span class="text-white"> VISUALIZAR CONTA</span></a></button>
+                    <div class="row justify-content-center bg-light p-2">
+                        <button type="button" class="btn btn-secondary mr-2 mb-2">FAZER PEDIDO</button>
+                        <button type="button" class="btn btn-success mb-2"><a href="conta.php"><span class="text-white"> VISUALIZAR CONTA</span></a></button>
                     </div>
 
                 </div>
-            </div>
+            
             
         </div>
     </div>
