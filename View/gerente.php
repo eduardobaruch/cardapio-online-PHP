@@ -15,7 +15,7 @@
     <link rel="icon" href="imagens/icon.png">
 </head>
 
-<body background="imagens/hamburgerbg.jpg" style="padding-bottom: 70px;">
+<body background="../imagens/hamburgerbg.jpg" style="padding-bottom: 70px;">
     <script type="text/javascript">
 
         $(document).ready(function () {
@@ -25,7 +25,7 @@
 
 
     <nav class="navbar navbar-light navbar-expand-md navigation-clean-button bg-warning">
-        <div class="container"><a class="navbar-brand" href="index.html"><img src="imagens/logo.png" alt="logo"
+        <div class="container"><a class="navbar-brand" href="index.html"><img src="../imagens/logo.png" alt="logo"
                     width="268" height="62"></a>
             <ul class="nav navbar-nav mr-auto justify-content-end">
                 <li class="nav-item dropdown"><a class="dropdown-toggle nav-link active" data-toggle="dropdown"
