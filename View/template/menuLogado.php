@@ -6,8 +6,22 @@
             <!--MENU--> 
             <ul class="nav navbar-nav mr-auto justify-content-end">
                 <li class="nav-item dropdown">
-                    <a class="dropdown-toggle nav-link active" data-toggle="dropdown" aria-expanded="false" href="logado.php">Cardápio </a>
+                    <a class="dropdown-toggle nav-link active" data-toggle="dropdown" aria-expanded="false" href="logado.php"><?php
+                    $paginaLink = basename($_SERVER['SCRIPT_NAME']); 
+                    if ($paginaLink == 'logado.php') {
+                        echo str_replace("logado.php", "Cardápio", $paginaLink);
+                    }  
+                         elseif (($paginaLink == 'sobre.php'))
+                         { 
+                             echo str_replace("sobre.php", "Sobre", $paginaLink);
+                             }
+                             elseif (($paginaLink == 'sugestoes.php'))
+                             { 
+                                 echo str_replace("sugestoes.php", "Sugestões", $paginaLink);
+                                 }
+                    ?> </a>
                     <div class="dropdown-menu" role="menu">
+                        <a class="dropdown-item" role="presentation" href="logado.php">Cardápio</a>
                         <a class="dropdown-item" role="presentation" href="sobre.php">Sobre</a>
                         <a class="dropdown-item" role="presentation" href="sugestoes.php">Sugestões</a>
                 </li>
