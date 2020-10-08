@@ -66,7 +66,7 @@
                         </div>
 
                     </div>
-                    <form method="POST" action="Controller/bebidas.php">
+                    <form method="POST" action="../Controller/cadBebidasController.php">
                         <div class="form-group"><label for="usrname">Nome da Bebida:</label><input class="form-control"
                                 type="text" id="nome" name="nome" /></div>
                         <div class="form-group"><label for="email">Fornecedor da Bebida:</label><input

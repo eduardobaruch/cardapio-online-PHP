@@ -1,6 +1,6 @@
 <?php
 
-require_once "itemDAO.php";
+//require_once "itemDAO.php";
 
 
 class Item{
