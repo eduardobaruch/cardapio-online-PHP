@@ -20,9 +20,15 @@ class Comida extends Item{
      public function setDescricao($string){
         return $this->descricao = $string;
     }
+    public function setId($string){
+        return $this->itemId = $string;
+    }
     //Metodos GET
     public function getDescricao(){
         return $this->descricao;
+    }
+    public function getId(){
+        return $this->itemId;
     }
     public function getNome(){
         return $this->nome;
@@ -38,6 +44,11 @@ class Comida extends Item{
         $novaComida = new comidaDAO();
         return $novaComida->incluir($this);
    
+}
+    public function editar(){
+    $editaComida = new comidaDAO();
+    return $editaComida->editar($this);
+
 }
  
 }
