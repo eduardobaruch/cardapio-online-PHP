@@ -66,15 +66,15 @@
                         </div>
 
                     </div>
-                    <form>
+                    <form method="POST" action="../Controller/cadComidasController.php">
                         <div class="form-group"><label for="usrname">Nome da Comida:</label><input class="form-control"
-                                type="email" id="email" /></div>
+                                type="text" id="nome" /></div>
                         <div class="form-group"><label for="email">Descrição da Comida:</label><input
-                                class="form-control" type="email" id="email" /></div>
+                                class="form-control" type="text" id="descricao" name="descricao"/></div>
                         <div class="input-group">
                             <label for="preco">Preço R$</span>
                                 <input type="number" value="0.00" min="0" step="0.01" data-number-to-fixed="2"
-                                    data-number-stepfactor="100" class="form-control currency" id="c2" />
+                                    data-number-stepfactor="100" class="form-control currency" id="c2" name="preco" />
                         </div>
                         <div class="container">
                             <div class="row justify-content-md-center">
