@@ -68,7 +68,7 @@
                     </div>
                     <form method="POST" action="../Controller/cadComidasController.php">
                         <div class="form-group"><label for="usrname">Nome da Comida:</label><input class="form-control"
-                                type="text" id="nome" /></div>
+                                type="text" id="nome" name="nome"></div>
                         <div class="form-group"><label for="email">Descrição da Comida:</label><input
                                 class="form-control" type="text" id="descricao" name="descricao"/></div>
                         <div class="input-group">
@@ -79,7 +79,7 @@
                         <div class="container">
                             <div class="row justify-content-md-center">
                                 <div class="col-md-4 button">
-                                    <button type="button" class="btn btn-warning btn-block mt-1 mb-3">Cadastrar</button>
+                                    <button type="submit" class="btn btn-warning btn-block mt-1 mb-3">Cadastrar</button>
                                 </div>
                             </div>
                         </div>
