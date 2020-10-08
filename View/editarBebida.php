@@ -51,23 +51,23 @@
             <div class="col-md-12">
 
                 <!-- COMIDAS -->
-                <div class="card bg-warning text-white card-body">ÁREA DO GERENTE - EDITAR COMIDA</div>
+                <div class="card bg-warning text-white card-body">ÁREA DO GERENTE - EDITAR BEBIDA</div>
 
                 <!-- ITEM 1 COMIDA -->
                 <div class="container card bg-light mt-1">
                     <div class="input-group mt-2 mb-3">
                         <div class="input-group">
                             <button class="btn btn-outline-secondary" type="button"
-                                data-toggle="" aria-haspopup="true">Comida</button>
+                                data-toggle="" aria-haspopup="true">Bebida</button>
                            
                         </div>
 
                     </div>
-                    <form method="POST" action="../Controller/editarComidasController.php">
-                        <div class="form-group"><label for="usrname">Nome da Comida:</label><input class="form-control" value="<?php echo $_GET['nome']?>"
+                    <form method="POST" action="../Controller/editarBebidasController.php">
+                        <div class="form-group"><label for="usrname">Nome da Bebida:</label><input class="form-control" value="<?php echo $_GET['nome']?>"
                                 type="text" id="nome" name="nome"></div>
-                        <div class="form-group"><label for="email">Descrição da Comida:</label><input
-                                class="form-control" value="<?php echo $_GET['descricao']?>" type="text" id="descricao" name="descricao"/></div>
+                        <div class="form-group"><label for="email">Fornecedor:</label><input
+                                class="form-control" value="<?php echo $_GET['fornecedor']?>" type="text" id="fornecedor" name="fornecedor"/></div>
                         <div class="input-group">
                             <label for="preco">Preço R$</span>
                                 <input type="number" value="<?php echo $_GET['preco']?>" min="0" step="0.01" data-number-to-fixed="2"
