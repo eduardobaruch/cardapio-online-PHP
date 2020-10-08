@@ -8,7 +8,7 @@ include_once("../Model/conexao.php");
   $minhaConexao = Conexao::getConnection();
 
             
-            $sql = $minhaConexao->prepare("SELECT * FROM itens WHERE tipo = 'comida'");
+            $sql = $minhaConexao->prepare("SELECT * FROM itens WHERE tipo = 'bebida'");
             $sql->execute();
  
 
@@ -18,7 +18,7 @@ include_once("../Model/conexao.php");
  while ($registro = $sql->fetch(PDO::FETCH_ASSOC))
  {
     $nome = $registro['nome'];
-    $descricao = $registro['descricao'];
+    $fornecedor = $registro['fornecedor'];
     $preco = $registro['preco'];
 
 ?>
@@ -28,7 +28,7 @@ include_once("../Model/conexao.php");
             <h5 class="mt-1"><?php echo $nome ?></h5>
             <h5 class="float-right my-auto text-right">R$<?php echo $preco ?></h5>
             <ul>
-                <li class="small"><?php echo $descricao ?></li>
+                <li class="small"><?php echo $fornecedor ?></li>
             </ul>
         </div>
         <div class="col-md-3 my-auto">

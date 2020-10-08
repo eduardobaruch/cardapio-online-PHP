@@ -1,5 +1,5 @@
 <?php
-  
+
 
 ?>
 
@@ -50,21 +50,10 @@ include ('template/menuLogado.php');
                 <!-- COMIDAS -->
                 <div class="card bg-warning text-white card-body">COMIDAS</div>
 
-                <!-- ITEM 1 COMIDA -->
-                <div class="container card bg-light mt-1">
-                    <div class="row">
-                        <div class="col-md-9">
-                            <h5 class="mt-1">Cheeseburguer HTML</h5>
-                            <h5 class="float-right my-auto text-right">R$8,50</h5>
-                            <ul>
-                                <li class="small">Pão branco, 180g de carne, queijo especial, molho picante.</li>
-                            </ul>
-                        </div>
-                        <div class="col-md-3 my-auto">
-                            <button type="button" class="btn btn-warning float-right">Eu Quero!</button>
-                        </div>
-                    </div>
-                </div>
+                <!-- ITENS COMIDA -->
+                <?php
+                include ('listarComidas.php');
+                ?>
 
                
 
@@ -75,20 +64,9 @@ include ('template/menuLogado.php');
                 </div>
 
                 <!-- ITEM 1 BEBIDA -->
-                <div class="container card bg-light mt-1">
-                    <div class="row">
-                        <div class="col-md-9">
-                            <h5 class="mt-1">Coca-Cola</h5>
-                            <h5 class="float-right my-auto text-right">R$3,30</h5>
-                            <ul>
-                                <li class="small">Lata.</li>
-                            </ul>
-                        </div>
-                        <div class="col-md-3 my-auto">
-                            <button type="button" class="btn btn-warning float-right">Eu Quero!</button>
-                        </div>
-                    </div>
-                </div>
+                <?php
+                include ('listarBebidas.php');
+                ?>
                 </div>
 
                
