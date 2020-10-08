@@ -39,9 +39,6 @@ class Comida extends Item{
         return $novaComida->incluir($this);
    
 }
-    public function buscarComidas(){
-        $comida = new ComidaDAO();
-        return $comida->buscarComidas($this);
-    }
+ 
 }
 

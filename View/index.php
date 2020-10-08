@@ -33,52 +33,10 @@ include ('template/menu.php');
                 <div class="card bg-warning text-white card-body">COMIDAS</div>
 
                 <!-- ITEM 1 COMIDA -->
-                <div class="container card bg-light mt-1">
-                    <div class="row">
-                        <div class="col-md-9">
-                            <h5 class="mt-1">Cheeseburguer HTML</h5>
-                            <h5 class="float-right my-auto text-right">R$8,50</h5>
-                            <ul>
-                                <li class="small">Pão branco, 180g de carne, queijo especial, molho picante.</li>
-                            </ul>
-                        </div>
-                        <div class="col-md-3 my-auto">
-                            <button onclick="alert('Você precisa fazer o login para realizar um pedido.')"  class="btn btn-warning float-right">Eu Quero!</button>
-                        </div>
-                    </div>
-                </div>
+                <?php
+                include ('listarComidas.php');
+                ?>
 
-                <!-- ITEM 2 COMIDA -->
-                <div class="container card bg-light mt-1">
-                    <div class="row">
-                        <div class="col-md-9">
-                            <h5 class="mt-1">Cheeseburguer PHP</h5>
-                            <h5 class="float-right my-auto text-right">R$9,90</h5>
-                            <ul>
-                                <li class="small">Pão branco, 180g de carne, queijo especial, molho picante.</li>
-                            </ul>
-                        </div>
-                        <div class="col-md-3 my-auto">
-                            <button onclick="alert('Você precisa fazer o login para realizar um pedido.')" type="button" class="btn btn-warning float-right">Eu Quero!</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- ITEM 3 COMIDA -->
-                <div class="container card bg-light mt-1">
-                    <div class="row">
-                        <div class="col-md-9">
-                            <h5 class="mt-1">Cheeseburguer Javascript</h5>
-                            <h5 class="float-right my-auto text-right">R$11,00</h5>
-                            <ul>
-                                <li class="small">Pão branco, 180g de carne, queijo especial, molho picante.</li>
-                            </ul>
-                        </div>
-                        <div class="col-md-3 my-auto">
-                            <button onclick="alert('Você precisa fazer o login para realizar um pedido.')" type="button" class="btn btn-warning float-right">Eu Quero!</button>
-                        </div>
-                    </div>
-                </div>
 
 
 
@@ -89,53 +47,11 @@ include ('template/menu.php');
                 </div>
 
                 <!-- ITEM 1 BEBIDA -->
-                <div class="container card bg-light mt-1">
-                    <div class="row">
-                        <div class="col-md-9">
-                            <h5 class="mt-1">Coca-Cola</h5>
-                            <h5 class="float-right my-auto text-right">R$3,30</h5>
-                            <ul>
-                                <li class="small">Lata.</li>
-                            </ul>
-                        </div>
-                        <div class="col-md-3 my-auto">
-                            <button onclick="alert('Você precisa fazer o login para realizar um pedido.')" type="button" class="btn btn-warning float-right">Eu Quero!</button>
-                        </div>
-                    </div>
+                <?php
+                include ('listarBebidas.php');
+                ?>
                 </div>
-
-                <!-- ITEM 2 BEBIDA -->
-                <div class="container card bg-light mt-1">
-                    <div class="row">
-                        <div class="col-md-9">
-                            <h5 class="mt-1">Cerveja Skol</h5>
-                            <h5 class="float-right my-auto text-right">R$6,90</h5>
-                            <ul>
-                                <li class="small">Garrafa 600ml.</li>
-                            </ul>
-                        </div>
-                        <div class="col-md-3 my-auto">
-                            <button onclick="alert('Você precisa fazer o login para realizar um pedido.')" type="button" class="btn btn-warning float-right">Eu Quero!</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- ITEM 3 BEBIDA -->
-                <div class="container card bg-light mt-1">
-                    <div class="row">
-                        <div class="col-md-9">
-                            <h5 class="mt-1">Água Mineral</h5>
-                            <h5 class="float-right my-auto text-right">R$2,80</h5>
-                            <ul>
-                                <li class="small">Garrafa 500ml.</li>
-                            </ul>
-                        </div>
-                        <div class="col-md-3 my-auto">
-                            <button onclick="alert('Você precisa fazer o login para realizar um pedido.')" type="button" class="btn btn-warning float-right">Eu Quero!</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
 
             <!-- CARRINHO HEADER -->
             <div class="col-md-4">
@@ -153,7 +69,7 @@ include ('template/menu.php');
 
                 <!-- CARRINHO TOTAL -->
                 <div class="container" style="background-color: #c9bfbf">
-                    <H6 class="mb-0 p-2">TOTAL DO PEDIDO <span class="float-right">R$ 0,00</span></H6>
+                    <H6 class="mb-0 p-2">TOTAL <span class="float-right">R$ 0,00</span></H6>
                 </div>
 
                 <!-- CARRINHO PAGAMENTO -->
