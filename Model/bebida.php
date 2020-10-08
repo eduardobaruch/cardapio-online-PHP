@@ -12,6 +12,7 @@ class Bebida extends Item{
         $this->nome = $nome;
         $this->fornecedor = $fornecedor;
         $this->preco = $preco;
+        $this->tipo = "bebida";
     }
   
 
@@ -28,6 +29,9 @@ class Bebida extends Item{
     }
     public function getPreco(){
         return $this->preco;
+    }
+    public function getTipo(){
+        return $this->tipo;
     }
     //Funcao Cadastrar
     public function incluir(){

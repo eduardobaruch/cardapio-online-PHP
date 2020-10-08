@@ -11,13 +11,15 @@ class BebidaDAO{
             $minhaConexao = Conexao::getConnection();
 
             
-            $sql = $minhaConexao->prepare("INSERT INTO bebidas (nome, fornecedor, preco)  VALUES (:n, :f, :p)");
+            $sql = $minhaConexao->prepare("INSERT INTO itens (nome, fornecedor, preco, tipo)  VALUES (:n, :f, :p, :t)");
             $nome = $novaBebida->getNome();
             $fornecedor = $novaBebida->getFornecedor();
-            $preco = $novaBebida->getPreco();        
+            $preco = $novaBebida->getPreco();  
+            $tipo = $novaBebida->getTipo();      
             $sql->bindParam("n",$nome);
             $sql->bindParam("f",$fornecedor);
             $sql->bindParam("p",$preco);
+            $sql->bindParam("t",$tipo);
           
             $sql->execute();
             
