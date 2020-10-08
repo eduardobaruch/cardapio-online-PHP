@@ -33,7 +33,7 @@ $sql->execute();
                             </ul>
                         </div>
                         <div class="col-md-2 my-auto">
-                        <?php echo "<a class='btn btn-danger float-right mr-1 mt-1' href='excluirItem.php?id=".$id."'>Excluir</a>"?>
+                        <?php echo "<a class='btn btn-danger float-right mr-1 mt-1' href='../Controller/excluirItemController.php?id=".$id."'>Excluir</a>"?>
                            
                            <?php echo "<a class='btn btn-primary float-right mr-1 mt-1 mb-1' href='editarItem.php?id=".$id."'>Editar</a>"?>
                         </div>

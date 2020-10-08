@@ -1,6 +1,6 @@
 <?php
     session_start();
-    if($_SESSION['poder'] < 2)
+    if((!isset($_SESSION['id_usuario'])) || ($_SESSION['poder'] < 2))
     {
         header("location: ../Controller/sair.php");
         exit;
