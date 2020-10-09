@@ -60,4 +60,3 @@ function getTotalCart($pdo) {
 	return $total;
 }
 
-print_r($_SESSION['carrinho']);

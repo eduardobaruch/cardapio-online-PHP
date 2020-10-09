@@ -83,24 +83,10 @@ include ('template/menuLogado.php');
 
                 <!-- CARRINHO ITENS -->
                 <div class="container" style="background-color: #c9bfbf">
-                    <div class="row p-1">
-                        <div class="col-md-9">
-                            <h7 class="mt-1">1x Cheeseburguer HTML</h7>
-                            
-                        </div>
-                        <div class="col-md-3 my-auto">
-                            <p>R$8,50 </p>
-                        </div>
-                    </div>
-                    <div class="row p-1">
-                        <div class="col-md-9">
-                            <h7 class="mt-1">2x Coca-Cola</h7>
-                            
-                        </div>
-                        <div class="col-md-3 my-auto">
-                            <p>R$6,60 </p>
-                        </div>
-                    </div>
+                    <?php
+                        include ('carrinho.php');
+                    ?>
+                    
                     </div>
                 
                 

@@ -17,6 +17,7 @@ include_once("../Model/conexao.php");
  // Obtendo os dados por meio de um loop while
  while ($registro = $sql->fetch(PDO::FETCH_ASSOC))
  {
+    $id = $registro['id_item'];
     $nome = $registro['nome'];
     $descricao = $registro['descricao'];
     $preco = $registro['preco'];
@@ -32,7 +33,8 @@ include_once("../Model/conexao.php");
             </ul>
         </div>
         <div class="col-md-3 my-auto">
-            <button type="button" class="btn btn-warning float-right">Eu Quero!</button>
+        <?php echo "<a class='btn btn-warning float-right' href='carrinho.php?&acao=add&id=".$id."'>Eu Quero!</a>"?>
+            
         </div>
     </div>
 </div>
