@@ -45,7 +45,7 @@
                 
                     <!-- MODAL BODY -->
                     <div class="modal-body">
-                        <form action="../Controller/loginController.php" method="POST" name="formLogin">
+                        <form action="../Controller/clienteController.php" method="POST" name="formLogin">
                             <!-- CPF -->
                             <div class="form-group">
                             <label class="sr-only" for="cpf">cpf</label>
@@ -65,6 +65,7 @@
                                 </div>
                                 <input id="password" type="password" class="form-control" placeholder="Senha" name="senha">
                             </div>
+                            <input type="hidden" name="acao" value="login" id="acao">
                         
                     
 
@@ -129,6 +130,7 @@
                                 <input id="Password" name="senha" type="password" class="form-control" placeholder="Senha"
                                     aria-label="Password" aria-describedby="basic-addon2" maxlength="15">
                             </div>
+                            <input type="hidden" name="acao" value="cadastrar" id="acao">
                        
 
                     <!-- MODAL FOOTER -->

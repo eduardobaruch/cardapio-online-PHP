@@ -3,6 +3,10 @@
 
 require_once "../Model/comida.php";
 require_once "../Model/item.php";
+require_once "../Model/bebida.php";
+
+
+
 
     $nome = addslashes($_POST['nome']);
     $descricao = addslashes($_POST['descricao']);

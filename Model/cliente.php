@@ -18,7 +18,7 @@ class Cliente{
         $this->email = $email;
         $this->senha = $senha;
         $this->bonus = 0;
-
+        $this->poder = 0;
     }
     //Metodos SET
     public function getNome(){
