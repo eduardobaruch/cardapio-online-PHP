@@ -28,6 +28,30 @@
         }
         header("location: logado.php");
     }
+
+    else if ($acao == 'finalizar') {
+        require_once ("../Model/item.php");
+        
+        $resultsCarts = getContentCart($pdoConnection);
+	$totalCarts  = getTotalCart($pdoConnection);
+       
+      
+            foreach($resultsCarts as $result) :
+               
+                $nome = $result['name'];
+               // $preco = $product['preco'];
+                $quantidade = $result['quantity'];
+                $preco = $result['subtotal'];
+                $novoItem = new Item($nome, $preco, $quantidade, $_SESSION['id_usuario']);
+                $novoItem->incluir();
+                echo "Sua compra foi finalizada!";
+            endforeach;	
+                
+
+            unset($_SESSION['carrinho']);
+            echo "<script language=javascript>alert( 'Pedido realizado com sucesso, ja ja chegara em sua mesa!' );</script>";
+            echo '<script type="text/javascript">window.location.href = "../view/logado.php";</script>';
+    }
 }
 	
 		

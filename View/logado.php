@@ -99,7 +99,8 @@ include ('template/menuLogado.php');
                 
                 
                     <div class="row rounded justify-content-center bg-light p-2 mt-1">
-                        <button type="button" class="btn btn-secondary mr-2 mb-2 mt-1">FAZER PEDIDO</button>
+                    <?php echo "<a class='btn btn-secondary mr-2 mb-2 mt-1' href='carrinho.php?&acao=finalizar'>FAZER PEDIDO</a>"?>
+                        
                         <button type="button" class="btn btn-success mb-2 mt-1"><a href="conta.php"><span class="text-white"> VISUALIZAR CONTA</span></a></button>
                     </div>
 
