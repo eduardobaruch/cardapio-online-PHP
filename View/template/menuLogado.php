@@ -27,7 +27,7 @@
                 </li>
             </ul>
             <!--USUARIO-->
-            <span class="">Olá, <u><strong><?php echo $_SESSION['nome'] ?></strong> </u> <br>Você possui <?php echo $_SESSION['bonus'] ?> pontos.</span><img class="border rounded-circle img-profile" src="https://cdn.icon-icons.com/icons2/108/PNG/256/females_female_avatar_woman_people_faces_18384.png" width="50"/>
+            <span class="">Olá, <u><strong><?php echo $_SESSION['nome'] ?></strong> </u> <br>Você possui <?php echo $_SESSION['bonus'] ?> pontos.</span><img class="border rounded-circle img-profile ml-1 mr-1" src="../imagens/pessoa.png" width="50"/>
             <a class="text-body" href="../Controller/sair.php"><strong>Sair</strong> </a>
         </div>
         
