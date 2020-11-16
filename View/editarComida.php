@@ -63,7 +63,7 @@
                         </div>
 
                     </div>
-                    <form method="POST" action="../Controller/editarComidasController.php">
+                    <form method="POST" action="../Controller/itemController.php">
                         <div class="form-group"><label for="usrname">Nome da Comida:</label><input class="form-control" value="<?php echo $_GET['nome']?>"
                                 type="text" id="nome" name="nome"></div>
                         <div class="form-group"><label for="email">Descrição da Comida:</label><input
@@ -75,6 +75,7 @@
                         </div>
                         <input type="hidden" id="custId" name="id" value="<?php echo $_GET['id']?>">
                         <div class="container">
+                        <input type="hidden" name="acao" value="editarComida" id="acao">
                             <div class="row justify-content-md-center">
                                 <div class="col-md-4 button">
                                     <button type="submit" class="btn btn-warning btn-block mt-1 mb-3">Editar</button>

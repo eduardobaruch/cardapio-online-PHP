@@ -63,7 +63,7 @@
                         </div>
 
                     </div>
-                    <form method="POST" action="../Controller/editarBebidasController.php">
+                    <form method="POST" action="../Controller/itemController.php">
                         <div class="form-group"><label for="usrname">Nome da Bebida:</label><input class="form-control" value="<?php echo $_GET['nome']?>"
                                 type="text" id="nome" name="nome"></div>
                         <div class="form-group"><label for="email">Fornecedor:</label><input
@@ -74,6 +74,7 @@
                                     data-number-stepfactor="100" class="form-control currency" id="c2" name="preco" />
                         </div>
                         <input type="hidden" id="custId" name="id" value="<?php echo $_GET['id']?>">
+                        <input type="hidden" name="acao" value="editarBebida" id="acao">
                         <div class="container">
                             <div class="row justify-content-md-center">
                                 <div class="col-md-4 button">
