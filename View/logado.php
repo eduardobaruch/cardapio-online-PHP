@@ -94,20 +94,7 @@ include ('template/menuLogado.php');
                 
                 
 
-                <!-- CARRINHO TOTAL -->
-                <div class="container" style="background-color: #c9bfbf">
-                <div class="row p-1">
-                        <div class="col-md-9">
-                            <h7 class="mt-1"><strong>TOTAL</strong> </h7>
-                            
-                        </div>
-                        <div class="col-md-3 my-auto">
-                            <strong>R$17,00 </strong>
-                        </div>
-                    </div>
-                    
-                </div>
-
+                
                 <!-- CARRINHO PAGAMENTO -->
                 
                 
