@@ -1,7 +1,7 @@
 <?php 
 	
-	require_once "../Model/pedidoDAO.php";
-	require_once "../Model/pedido.php";
+	require_once "../Model/carrinhoDAO.php";
+	require_once "../Model/carrinho.php";
     require_once "../Model/conexao.php";
 	$pdoConnection = Conexao::getConnection();
 
