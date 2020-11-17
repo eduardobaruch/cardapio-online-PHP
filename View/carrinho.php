@@ -39,10 +39,10 @@
             foreach($resultsCarts as $result) :
                
                 $nome = $result['name'];
-               // $preco = $product['preco'];
                 $quantidade = $result['quantity'];
                 $preco = $result['subtotal'];
-                $novoItem = new Item($nome, $preco, $quantidade, $_SESSION['id_usuario']);
+                $pedidoId =  $_SESSION['pedidoId']; 
+                $novoItem = new Item($nome, $preco, $quantidade, $pedidoId);
                 $novoItem->incluir();
                 echo "Sua compra foi finalizada!";
             endforeach;	
@@ -65,12 +65,7 @@
 	<div class="container">
 		
 		<?php if($resultsCarts) : ?>
-			
-			
-
-					
-           
-                    
+			                
 				  <?php foreach($resultsCarts as $result) : ?>
 					<div class="row p-1">
                         <div class="col-md-9">
@@ -98,9 +93,20 @@
                     </div>
                     
                 </div>
+                </div>
+                
+
+
+                <!-- CARRINHO PAGAMENTO -->
+                
+                
+                <div class="row rounded justify-content-center bg-light p-2 mt-1">
+                    <?php echo "<a class='btn btn-secondary mr-2 mb-2 mt-1' href='../Controller/pedidoController.php?acao=cadastrar&clienteId=".$_SESSION['id_usuario']."&valorTotal=".$totalCarts."'>FAZER PEDIDO</a>"?>
 
 			
-	<?php endif?>
+    <?php endif
+    
+    ?>
 		
 	
 	

@@ -4,18 +4,18 @@ require_once "itemDAO.php";
 
 
 class Item{
-    private $contaId;
+    private $pedidoId;
     private $nome;
     private $preco;
     private $quantidade;
     
 
-    public function __construct($nome, $preco, $quantidade, $contaId)
+    public function __construct($nome, $preco, $quantidade, $pedidoId)
     {
         $this->nome = $nome;
         $this->preco = $preco;
         $this->quantidade = $quantidade;
-        $this->contaId = $contaId;
+        $this->pedidoId = $pedidoId;
     }
 
      //Metodos GET
@@ -28,8 +28,8 @@ class Item{
     public function setQuantidade($string){
         return $this->quantidade = $string;
     }
-    public function setContaId($string){
-        return $this->contaId = $string;
+    public function setpedidoId($string){
+        return $this->pedidoId = $string;
     }
     //Metodos SET
     public function getNome(){
@@ -41,8 +41,8 @@ class Item{
     public function getQuantidade(){
         return $this->quantidade;
     }
-    public function getContaId(){
-        return $this->contaId;
+    public function getpedidoId(){
+        return $this->pedidoId;
     }
 
     public function incluir(){

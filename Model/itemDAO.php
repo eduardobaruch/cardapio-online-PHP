@@ -11,15 +11,15 @@ class ItemDAO{
             $minhaConexao = Conexao::getConnection();
 
             
-            $sql = $minhaConexao->prepare("INSERT INTO pedido (nome, preco, quantidade, contaId)  VALUES (:n, :p, :q, :c)");
+            $sql = $minhaConexao->prepare("INSERT INTO itenspedidos (nome, preco, quantidade, pedidoId)  VALUES (:n, :p, :q, :z)");
             $nome = $novoItem->getNome();
             $preco = $novoItem->getpreco();
             $quantidade = $novoItem->getQuantidade();  
-            $contaId = $novoItem->getContaId();      
+            $pedidoId = $novoItem->getpedidoId();      
             $sql->bindParam("n",$nome);
             $sql->bindParam("p",$preco);
             $sql->bindParam("q",$quantidade);
-            $sql->bindParam("c",$contaId);
+            $sql->bindParam("z",$pedidoId);
           
             $sql->execute();
             
