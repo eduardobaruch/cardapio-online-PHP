@@ -39,7 +39,7 @@
 
 
     <nav class="navbar navbar-light navbar-expand-md navigation-clean-button bg-warning">
-        <div class="container"><a class="navbar-brand" href="index.html"><img src="../imagens/logo.png" alt="logo"
+        <div class="container"><a class="navbar-brand" href="index.php"><img src="../imagens/logo.png" alt="logo"
                     width="268" height="62"></a>
                     <a class="text-body" href="../Controller/sair.php"><strong>Sair</strong> </a>
 
@@ -54,59 +54,13 @@
                 <div class="card bg-warning text-white card-body">ÁREA DA COZINHA - PEDIDOS</div>
 
                 <!-- PEDIDO 1 -->
-                <div class="container card bg-light mt-1">
-                    <div class="row">
-                        <div class="col-md-10">
-                            <h5 class="mt-1"><span>1x -</span> Cheeseburguer HTML</h5>
-                            <ul>
-                                <li class="small">Pão branco, 180g de carne, queijo especial, molho picante.</li>
-                            </ul>
-                            <hr>
-                            <h5 class="mt-1"><span>2x - </span>Coca-Cola</h5>
-                            <ul>
-                                <li class="small">Lata.</li>
-                            </ul>
-                            <hr>
-
-                        </div>
-                        <div class="col-md-2 my-auto d-flex flex-column">
-                            <h5 class="text-center">Pedido 1</h5>
-                            <h5 class="text-center">Mesa 3</h5>
-                            <button type="button" class="btn btn-warning float-right">Pronto!</button>
-                        </div>
-                    </div>
-                </div>
-                <!-- PEDIDO 2 -->
-                <div class="container card bg-light mt-1">
-                    <div class="row">
-                        <div class="col-md-10">
-                            <h5 class="mt-1"><span>1x - </span>Cheeseburguer PHP</h5>
-                            <ul>
-                                <li class="small">Pão branco, 180g de carne, queijo especial, molho picante.</li>
-                            </ul>
-                            <hr>
-                            <h5 class="mt-1"><span>2x - </span>Cerveja Skol</h5>
-                            <ul>
-                                <li class="small">Garrafa 600ml.</li>
-                            </ul>
-                            <hr>
-                            <h5 class="mt-1"><span>1x - </span>Cheeseburguer HTML</h5>
-                            <ul>
-                                <li class="small">Pão branco, 180g de carne, queijo especial, molho picante.</li>
-                            </ul>
-                            <hr>
-
-
-                        </div>
-                        <div class="col-md-2 my-auto d-flex flex-column">
-                            <h5 class="text-center">Pedido 2</h5>
-                            <h5 class="text-center">Mesa 1</h5>
-                            <button type="button" class="btn btn-warning float-right">Pronto!</button>
-                        </div>
-                    </div>
-                </div>
+                <?php
+                include ('consultarPedidos.php');
+                ?>
+               
+          
                 <!-- PEDIDO 3 -->
-                <div class="container card bg-light mt-1">
+               <!-- <div class="container card bg-light mt-1">
                     <div class="row">
                         <div class="col-md-10">
                             <h5 class="mt-1"><span>1x - </span>Cheeseburguer javascript</h5>
@@ -133,7 +87,7 @@
                             <button type="button" class="btn btn-warning float-right">Pronto!</button>
                         </div>
                     </div>
-                </div>
+                </div> -->
 
 
 
