@@ -54,7 +54,7 @@ header("location: logado.php");
                 $pedidoId =  $_SESSION['pedidoId']; 
                 $novoItem = new Item($nome, $preco, $quantidade, $pedidoId);
                 $novoItem->incluir();
-                echo "Sua compra foi finalizada!";
+                
             endforeach;	
                 
 

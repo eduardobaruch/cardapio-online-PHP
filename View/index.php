@@ -1,4 +1,9 @@
-
+<?php
+session_start();
+unset($_SESSION['id_usuario']);
+    unset($_SESSION['carrinho']);
+    unset($_SESSION['pedidoId']); 
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -63,7 +68,7 @@ include ('template/menu.php');
                 <!-- CARRINHO ITENS -->
                 <div class="container" style="background-color: #c9bfbf">
                     <div class="row justify-content-center carrinho-vazio">
-                        <p><br><br><br><br>seu carrinho esta vazio <br><br><br><br><br></p>
+                        <p><br><br><br><br>Faça login para adicionar itens <br><br><br><br><br></p>
                     </div>
                 </div>
 
