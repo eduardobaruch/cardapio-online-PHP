@@ -28,6 +28,16 @@
         }
         header("location: logado.php");
     }
+    else if($acao == "mais") {
+       
+                    updateCart($_GET['id'], $_GET['quant']+1);    
+        header("location: logado.php");
+    }
+    else if($acao == "menos") {
+       
+        updateCart($_GET['id'], $_GET['quant']-1);    
+header("location: logado.php");
+}
 
     else if ($acao == 'finalizar') {
         require_once ("../Model/item.php");
@@ -69,15 +79,37 @@
 				  <?php foreach($resultsCarts as $result) : ?>
 					<div class="row p-1">
                         <div class="col-md-9">
-                            <h7 class="mt-1"><a href="carrinho.php?acao=del&id=<?php echo $result['id']?>" class="">-</a><?php echo $result['quantity']?>x <?php echo $result['name']?></h7>
+                            <h7 class="mt-1">
+
+
+
+
+
+
+                            <div class="d-flex flex-nowrap align-content-stretch">
+                            <div class = "border rounded border-dark">
+  <a class="p-1 ml-1 text-dark "href="carrinho.php?acao=menos&id=<?php echo $result['id']?>&quant=<?php echo $result['quantity']?>">-</a>
+  <span class="p-1 "><?php echo $result['quantity']?></span>
+  <a class="p-1 text-dark "href="carrinho.php?acao=mais&id=<?php echo $result['id']?>&quant=<?php echo $result['quantity']?>">+</a>
+  </div>
+  <span class="p-1"><?php echo $result['name']?></h7></span>
+</div>
+
+                            
+  
+                            
+ 
+  
+                           
+                            
+                         
                             
                         </div>
                         <div class="col-md-3 my-auto">
                             <p>R$<?php echo number_format($result['subtotal'], 2, ',', '.')?> </p>
                         </div>
                     </div>
-						
-						
+                    
 				<?php endforeach;?>
 				
 				  <!-- CARRINHO TOTAL -->
@@ -94,19 +126,28 @@
                     
                 </div>
                 </div>
-                
+                <div class="row rounded justify-content-center bg-light p-2 mt-1">
+                    <?php echo "<a class='btn btn-secondary mr-2 mb-2 mt-1' href='../Controller/pedidoController.php?acao=cadastrar&clienteId=".$_SESSION['id_usuario']."&valorTotal=".$totalCarts."'>FAZER PEDIDO</a>"?>
+                    <button type="button" class="btn btn-success mb-2 mt-1"><a href="conta.php"><span class="text-white"> VISUALIZAR CONTA</span></a></button>
+                    </div>
 
 
                 <!-- CARRINHO PAGAMENTO -->
-                
-                
-                <div class="row rounded justify-content-center bg-light p-2 mt-1">
-                    <?php echo "<a class='btn btn-secondary mr-2 mb-2 mt-1' href='../Controller/pedidoController.php?acao=cadastrar&clienteId=".$_SESSION['id_usuario']."&valorTotal=".$totalCarts."'>FAZER PEDIDO</a>"?>
+                <?php else: ?>
+                    <div class="container" style="background-color: #c9bfbf">
+                    <div class="row justify-content-center carrinho-vazio">
+                        <p><br><br><br><br>seu carrinho esta vazio <br><br><br><br><br></p>
+                    </div>
+                </div>
 
-			
-    <?php endif
+                <div class="row rounded justify-content-center bg-light p-2 mt-1">
+                   
+                    <button type="button" class="btn btn-success mb-2 mt-1"><a href="conta.php"><span class="text-white"> VISUALIZAR CONTA</span></a></button>
+                    </div>
+                    
+                    </div>
     
-    ?>
+			
+    <?php endif ?>
 		
-	
-	
+   

@@ -87,26 +87,11 @@ include ('template/menuLogado.php');
                         include ('carrinho.php');
                     ?>
                     
-                
-                
-                
-                
-
-                
-                <!-- CARRINHO PAGAMENTO -->
-                
-                
-                   
-                        
-                        <button type="button" class="btn btn-success mb-2 mt-1"><a href="conta.php"><span class="text-white"> VISUALIZAR CONTA</span></a></button>
                     </div>
+      
+                       
 
                
-            
-            
-        </div>
-    </div>
-
 
     <!-- Footer -->
     <footer class="footer fixed-bottom font-small bg-warning mt-1">
