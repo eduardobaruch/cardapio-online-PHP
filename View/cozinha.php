@@ -45,7 +45,9 @@
 
     </nav>
 
-
+    <?php
+echo "<meta HTTP-EQUIV='refresh' CONTENT='5'>";
+?>
     <div class="container mt-3">
         <div class="row">
             <div class="col-md-12">
