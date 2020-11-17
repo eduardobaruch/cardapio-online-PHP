@@ -78,12 +78,8 @@ header("location: logado.php");
 			                
 				  <?php foreach($resultsCarts as $result) : ?>
 					<div class="row p-1">
-                        <div class="col-md-9">
+                        <div class="col-sm-9 col-9 col-md-9">
                             <h7 class="mt-1">
-
-
-
-
 
 
                             <div class="d-flex flex-nowrap align-content-stretch">
@@ -95,17 +91,10 @@ header("location: logado.php");
   <span class="p-1"><?php echo $result['name']?></h7></span>
 </div>
 
-                            
-  
-                            
- 
-  
-                           
-                            
-                         
+                                              
                             
                         </div>
-                        <div class="col-md-3 my-auto">
+                        <div class="col-sm-3 col-3 col-md-3">
                             <p>R$<?php echo number_format($result['subtotal'], 2, ',', '.')?> </p>
                         </div>
                     </div>
@@ -115,11 +104,11 @@ header("location: logado.php");
 				  <!-- CARRINHO TOTAL -->
                   <div class="container" style="background-color: #c9bfbf">
                 <div class="row p-1">
-                        <div class="col-md-9">
+                        <div class="col-9">
                             <h7 class="mt-1"><strong>TOTAL</strong> </h7>
                             
                         </div>
-                        <div class="col-md-3 my-auto">
+                        <div class="col-3 my-auto">
                             <strong>R$<?php echo number_format($totalCarts, 2, ',', '.')?> </strong>
                         </div>
                     </div>

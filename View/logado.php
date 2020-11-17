@@ -45,10 +45,10 @@ include ('template/menuLogado.php');
     <!-- CARDÁPIO -->
     <div class="container mt-3">
         <div class="row">
-            <div class="col-md-8">
+            <div class="col-xl-8 col-lg-7 col-md-6">
 
                 <!-- COMIDAS -->
-                <div class="card bg-warning text-white card-body">COMIDAS</div>
+                <div class="card bg-warning text-white card-body mt-1">COMIDAS</div>
 
                 <!-- ITENS COMIDA -->
                 <?php
@@ -73,8 +73,8 @@ include ('template/menuLogado.php');
 
             <!-- CARRINHO HEADER -->
             
-                <div class="col-md-4">
-                <div class="card bg-dark text-white card-body">SEU PEDIDO
+                <div class="col-xl-4 col-lg-5 col-md-6">
+                <div class="card bg-dark text-white card-body mt-1">SEU PEDIDO
                     <div class="card-img-overlay"><i class="fas fa-hamburger float-right" style='font-size:24px'></i>
                     </div>
                 </div>
