@@ -51,7 +51,7 @@ class Pedido{
         return $novoPedido->incluir($this);
     }
 
-    public function pronto($pedidoId){
+    public function pedidoPronto($pedidoId){
         $novoPedido = new PedidoDAO();
         return $novoPedido->pronto($pedidoId);
     }

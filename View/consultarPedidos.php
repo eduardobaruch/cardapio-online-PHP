@@ -31,7 +31,8 @@ $sql->execute();
                         <div class="col-md-2 my-auto d-flex flex-column">
                             <h5 class="text-center">Pedido <?php echo $id ?></h5>
                            
-                            <button type="button" class="btn btn-warning float-right mb-2">Pronto!</button>
+                            
+                            <?php echo "<a class='btn btn-warning float-right mb-2' href='../Controller/pedidoController.php?acao=pronto&id=".$id."'>Pronto!</a>"?>
                         </div>
                     </div>
                 </div>

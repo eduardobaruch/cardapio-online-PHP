@@ -35,6 +35,21 @@ class PedidoDAO{
 
     public function pronto($pedidoId)
     {
-       
+        try{
+            $minhaConexao = Conexao::getConnection();
+
+           
+            $sql = $minhaConexao->prepare("UPDATE pedidos SET status = 1 WHERE id = '$pedidoId'");
+           
+            $sql->execute();
+           
+            
+          
+            return $sql->rowCount();
+        }
+    
+        catch(PDOException $e) {
+            return "entrou no catch".$e->getMessage();
+        } 
 }
 }
