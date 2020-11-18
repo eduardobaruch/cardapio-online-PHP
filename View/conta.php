@@ -59,41 +59,11 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td>Chesseburguer HTML</td>
-                                            <td>2</td>
-                                            <td>R$8,50</td>
-                                            <td>R$17,00</td>
-                                           
-                                        </tr>
-                                        <tr>
-                                            <td>Coca-Cola</td>
-                                            <td>3</td>
-                                            <td>R$3,30</td>
-                                            <td>R$9,90</td>
-                                            
-                                        </tr>
-                                        <tr>
-                                            <td>Chesseburguer Javascript</td>
-                                            <td>1</td>
-                                            <td>R$11,00</td>
-                                            <td>R$11,00</td>
-                                          
-                                        </tr>
-                                        <tr>
-                                            <td>Cerveja Skol</td>
-                                            <td>9</td>
-                                            <td>R$6,90</td>
-                                            <td>R$62,10</td>
-                                          
-                                        </tr>
-                                        <tr>
-                                            <td></td>
-                                            <td></td>
-                                            <td><strong>TOTAL:</strong></td>
-                                            <td><strong>R$100,00</strong></td>
-                                          
-                                        </tr>
+                                        
+                                        <?php
+               include ('listarConta.php');
+                ?>
+                                       
                                    
 
 

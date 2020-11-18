@@ -5,14 +5,14 @@ require_once "pedidoDAO.php";
 
 class Pedido{
     private $pedidoId;
-    private $clienteId;
+    private $contaId;
     private $valorTotal;
     private $status;
    
 
-    public function __construct($clienteId, $valorTotal)
+    public function __construct($contaId, $valorTotal)
     {
-        $this->clienteId = $clienteId;
+        $this->contaId = $contaId;
         $this->valorTotal = $valorTotal;
         $this->status = false;
         
@@ -21,8 +21,8 @@ class Pedido{
     public function getPedidoId(){
         return $this->pedidoId;
     }
-    public function getClienteId(){
-        return $this->clienteId;
+    public function getContaId(){
+        return $this->contaId;
     }
     public function getValorTotal(){
         return $this->valorTotal;
@@ -36,13 +36,13 @@ class Pedido{
     public function setPedidoId($string){
         return $this->pedidoId = $string;
     }
-    public function setClienteId($string){
-        return $this->clienteId = $string;
+    public function setContaId($string){
+        return $this->contaId = $string;
     }
     public function setValorTotal($string){
         return $this->valorTotal = $string;
     }
-    public function setEmgetStatusail($string){
+    public function setStatus($string){
         return $this->status = $string;
     }
 

@@ -10,16 +10,17 @@ if ($acao=="cadastrar") {
 // $valorTotal = addslashes($_GET['valorTotal']);
  
 $valorTotal =  $_GET["valorTotal"];
-$clienteId =  $_GET["clienteId"];
+$contaId =  $_GET["contaId"];
 
-$novoPedido = new Pedido($clienteId, $valorTotal);
+$novoPedido = new Pedido($contaId, $valorTotal);
 
 $novoPedido->incluir();
 
 
 header("location: ../View/carrinho.php?acao=finalizar");
-
+        exit; 
 }
+
 
 else if ($acao=="pronto") {
     

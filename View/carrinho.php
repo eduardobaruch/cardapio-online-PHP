@@ -116,7 +116,7 @@ header("location: logado.php");
                 </div>
                 </div>
                 <div class="row rounded justify-content-center bg-light p-2 mt-1">
-                    <?php echo "<a class='btn btn-secondary mr-2 mb-2 mt-1' href='../Controller/pedidoController.php?acao=cadastrar&clienteId=".$_SESSION['id_usuario']."&valorTotal=".$totalCarts."'>FAZER PEDIDO</a>"?>
+                    <?php echo "<a class='btn btn-secondary mr-2 mb-2 mt-1' href='../Controller/contaController.php?acao=cadastrar&clienteId=".$_SESSION['id_usuario']."&valorTotal=".$totalCarts."'>FAZER PEDIDO</a>"?>
                     <button type="button" class="btn btn-success mb-2 mt-1"><a href="conta.php"><span class="text-white"> VISUALIZAR CONTA</span></a></button>
                     </div>
 
