@@ -49,10 +49,11 @@ header("location: logado.php");
             foreach($resultsCarts as $result) :
                
                 $nome = $result['name'];
+                $precoUnit = $result['price'];
                 $quantidade = $result['quantity'];
                 $preco = $result['subtotal'];
                 $pedidoId =  $_SESSION['pedidoId']; 
-                $novoItem = new Item($nome, $preco, $quantidade, $pedidoId);
+                $novoItem = new Item($nome, $preco, $quantidade, $pedidoId, $precoUnit);
                 $novoItem->incluir();
                 
             endforeach;	

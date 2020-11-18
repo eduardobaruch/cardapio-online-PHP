@@ -8,14 +8,16 @@ class Item{
     private $nome;
     private $preco;
     private $quantidade;
+    private $precoUnit;
     
 
-    public function __construct($nome, $preco, $quantidade, $pedidoId)
+    public function __construct($nome, $preco, $quantidade, $pedidoId, $precoUnit)
     {
         $this->nome = $nome;
         $this->preco = $preco;
         $this->quantidade = $quantidade;
         $this->pedidoId = $pedidoId;
+        $this->precoUnit = $precoUnit;
     }
 
      //Metodos GET
@@ -31,6 +33,9 @@ class Item{
     public function setpedidoId($string){
         return $this->pedidoId = $string;
     }
+    public function setPrecoUnit($string){
+        return $this->precoUnit = $string;
+    }
     //Metodos SET
     public function getNome(){
         return $this->nome;
@@ -43,6 +48,9 @@ class Item{
     }
     public function getpedidoId(){
         return $this->pedidoId;
+    }
+    public function getPrecoUnit(){
+        return $this->precoUnit;
     }
 
     public function incluir(){
