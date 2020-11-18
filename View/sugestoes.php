@@ -75,7 +75,7 @@
                         
                             <div class="row justify-content-md-center">
                                 <div class="col-md-4 button">
-                                    <button type="submit" class="btn btn-warning btn-block mt-1 mb-3">Enviar</button>
+                                    <button onclick="alert('Obrigado pela sua sugestão!')"type="submit" class="btn btn-warning btn-block mt-1 mb-3">Enviar</button>
                                 </div>
                             </div>
                         </div>

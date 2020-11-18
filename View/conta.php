@@ -58,7 +58,7 @@
                                            
                                         </tr>
                                     </thead>
-                                    <tbody>
+                                    
                                         
                                         <?php
                include ('listarConta.php');
@@ -69,19 +69,7 @@
 
                        
                                         
-                                    </tbody>
-                                   
-                                </table>
-                                
-                            </div>
-                            <div class="row justify-content-md-center">
-                                <div class="col-md-4 button">
-                                    <button type="button" class="btn btn-warning btn-block mt-1 mb-3"><a class="text-body" href="logado.php">Voltar para cardápio</a></button>
-                                </div>
-                                <div class="col-md-4 button">
-                                    <button onclick="alert('Conta paga! Obrigado pela sua visita, volte sempre!')" class="btn btn-warning btn-block mt-1 mb-3"><a class="text-body" href="../Controller/sair.php">Pagar conta</a></button>
-                                </div>
-                            </div>
+                          
                         </div>
                     </div>
                 </div>

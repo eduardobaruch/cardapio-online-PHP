@@ -34,13 +34,16 @@ if(!isset($_SESSION['contaId']))
 
 }
 
-else if ($acao=="pronto") {
+else if ($acao=="pagar") {
     
-$id =  $_GET["id"];
-$pedidoPronto = new Pedido($id, 0);
+$id =  $_GET["contaId"];
+$contaPaga = new Conta($id, 0);
 
-$pedidoPronto->pedidoPronto($id);
-header("location: ../View/cozinha.php");
+$contaPaga->pagarConta($id);
+
+session_start();
+unset($_SESSION['contaId']);
+header("location: ../View/logado.php");
 
 }
  

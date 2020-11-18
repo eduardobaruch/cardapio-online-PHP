@@ -51,6 +51,10 @@ class Conta{
         $novaConta = new contaDAO();
         return $novaConta->adicionarValor($contaId, $valorTotal);
     }
+    public function pagarConta($contaId){
+        $novaConta = new contaDAO();
+        return $novaConta->pagarConta($contaId);
+    }
 
 }
 

@@ -19,13 +19,15 @@ include_once("../Model/conexao.php");
  // Obtendo os dados por meio de um loop while
  while ($registro = $sql->fetch(PDO::FETCH_ASSOC))
  {
-    $valorConta = $registro['valorConta'];    
+    $valorConta = $registro['valorConta'];  
+    $contaId = $registro['id_conta'];  
 
 ?>
   
   <?php
                include ('listarItensConta.php');
                 ?>
+                <tbody>
                 <tr>
                                             <td></td>
                                             <td></td>
@@ -33,6 +35,21 @@ include_once("../Model/conexao.php");
                                             <td><strong><?php echo $valorConta ?></strong></td>
                                           
                                         </tr>
+
+                                        </tbody>
+                                   
+                                   </table>
+                                   
+                               </div>
+                               <div class="row justify-content-md-center">
+                                   <div class="col-md-4 button">
+                                       <button type="button" class="btn btn-warning btn-block mt-1 mb-3"><a class="text-body" href="logado.php">Voltar para cardápio</a></button>
+                                   </div>
+                                   <div class="col-md-4 button">
+                                       <button onclick="alert('Conta paga! Obrigado pela sua visita, volte sempre!')" class="btn btn-warning btn-block mt-1 mb-3"><a class="text-body" href='../Controller/contaController.php?acao=pagar&contaId=<?php echo $contaId?>'>Pagar conta</a></button>
+                                   </div>
+                               </div>
+                                        
 
 <?php
    

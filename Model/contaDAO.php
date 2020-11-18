@@ -52,4 +52,24 @@ class ContaDAO{
             return "entrou no catch".$e->getMessage();
         } 
 }
+
+public function pagarConta($contaId)
+{
+    try{
+        $minhaConexao = Conexao::getConnection();
+
+       
+        $sql = $minhaConexao->prepare("UPDATE conta SET status = 1 WHERE id_conta = '$contaId'");
+       
+        $sql->execute();
+       
+        
+      
+        return $sql->rowCount();
+    }
+
+    catch(PDOException $e) {
+        return "entrou no catch".$e->getMessage();
+    } 
+}
 }
