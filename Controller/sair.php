@@ -16,6 +16,3 @@
         echo '<script type="text/javascript">window.location.href = "../view/conta.php";</script>';
         exit;
     }
-    
-
-?>
