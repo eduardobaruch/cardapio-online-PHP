@@ -33,7 +33,7 @@
 
 
     <nav class="navbar navbar-light navbar-expand-md navigation-clean-button bg-warning">
-        <div class="container"><a class="navbar-brand" href="logado.php"><img src="../imagens/logo.png" alt="logo"
+        <div class="container"><a class="navbar-brand" href="index.php"><img src="../imagens/logo.png" alt="logo"
                     width="268" height="62"></a>
             <ul class="nav navbar-nav mr-auto justify-content-end">
                 <li class="nav-item dropdown"><a class="dropdown-toggle nav-link active" data-toggle="dropdown"
