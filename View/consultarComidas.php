@@ -33,7 +33,10 @@ $sql->execute();
                             </ul>
                         </div>
                         <div class="col-md-2 my-auto">
-                        <?php echo "<a class='btn btn-danger float-right mr-1 mt-1' href='../Controller/itemController.php?id=".$id."&acao2=excluir'>Excluir</a>"?>
+                        <form method="POST" action="../Controller/itemController.php">
+                        <input type="hidden" name="acao" value="excluir">
+                        <input type="hidden" name="id" value="<?php echo $id?>" id="acao">
+                        <button type="submit" class='btn btn-danger float-right mr-1 mt-1'>Excluir</button></form>
                            
                            <?php echo "<a class='btn btn-primary float-right mr-1 mt-1 mb-1' href='../view/editarcomida.php?id=".$id."&nome=".$nome."&descricao=".$descricao."&preco=".$preco."'>Editar</a>"?>
                         </div>

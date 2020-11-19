@@ -11,7 +11,7 @@ session_start();
 
 
 $acao =  $_POST["acao"];
-$acao2 = $_GET["acao2"];
+
 require_once "../Model/comida.php";
 require_once "../Model/item.php";
 require_once "../Model/bebida.php";
@@ -121,9 +121,9 @@ else {
 }
 }
 
-else if ($acao2=="excluir") {
+else if ($acao=="excluir") {
 
-    $id =  $_GET["id"];
+    $id =  $_POST["id"];
     $excluirItem = new Item(0, 0, 0, 0, 0);
     $excluirItem->excluir($id);
     echo "<script>alert('Registro deletado com sucesso!');document.location='../view/consultaProdutos.php'</script>";

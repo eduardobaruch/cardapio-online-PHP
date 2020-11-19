@@ -65,7 +65,7 @@ class ItemDAO{
         try{
             $minhaConexao = Conexao::getConnection();
 
-            $id = $_GET['id'];
+           
             $sql = $minhaConexao->prepare("DELETE FROM itens WHERE id_item = '$id'");
             $sql->execute();
             
