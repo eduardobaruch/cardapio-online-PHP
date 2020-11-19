@@ -3,6 +3,7 @@
 
 $acao =  $_GET["acao"];
 require_once "../Model/conta.php";
+require_once "../Model/cliente.php";
 
 if ($acao=="cadastrar") {
     
@@ -36,11 +37,17 @@ if(!isset($_SESSION['contaId']))
 
 else if ($acao=="pagar") {
 
+$bonus = $_GET["bonus"];
 $valorFinal =  $_GET["valorFinal"];
 $id =  $_GET["contaId"];
+session_start();
+$id_usuario = $_SESSION["id_usuario"];
+
 $contaPaga = new Conta($id, $valorFinal);
 $contaPaga->pagarConta($id, $valorFinal);
 
+$gerarBonus = new Cliente(0, 0, 0, 0);
+$gerarBonus->gerarBonus($id_usuario, $bonus);
 
 
 header("location: ../Controller/sair.php");

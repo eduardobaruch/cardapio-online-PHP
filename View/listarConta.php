@@ -21,7 +21,8 @@ include_once("../Model/conexao.php");
  {
     $valorConta = $registro['valorConta'];  
     $contaId = $registro['id_conta'];  
-
+    $valorFinal = $valorConta - $_SESSION['bonus'];
+    $bonusGerado = $valorFinal*0.1;
 ?>
   
   <?php
@@ -29,7 +30,7 @@ include_once("../Model/conexao.php");
                 ?>
                 <tbody>
                 <tr>
-                    <?php $valorFinal = $valorConta - $_SESSION['bonus']?>
+                   
                                             <td></td>
                                             <td></td>
                                             <td><strong></strong></td>
@@ -64,7 +65,7 @@ include_once("../Model/conexao.php");
                                        <button type="button" class="btn btn-warning btn-block mt-1 mb-3"><a class="text-body" href="logado.php">Voltar para cardápio</a></button>
                                    </div>
                                    <div class="col-md-4 button">
-                                       <button onclick="alert('Conta paga! Obrigado pela sua visita, volte sempre!')" class="btn btn-warning btn-block mt-1 mb-3"><a class="text-body" href='../Controller/contaController.php?acao=pagar&contaId=<?php echo $contaId?>&valorFinal=<?php echo $valorFinal?>'>Pagar conta</a></button>
+                                       <button onclick="alert('Conta paga! Obrigado pela sua visita, volte sempre! Foi gerado um bonus de R$<?php echo number_format($bonusGerado, 2, ',', '.')?> para o seu proximo pedido.')" class="btn btn-warning btn-block mt-1 mb-3"><a class="text-body" href='../Controller/contaController.php?acao=pagar&contaId=<?php echo $contaId?>&valorFinal=<?php echo $valorFinal?>&bonus=<?php echo $bonusGerado?>'>Pagar conta</a></button>
                                    </div>
                                </div>
                                         

@@ -81,4 +81,24 @@ class ClienteDAO{
 
     
 }
+
+public function gerarBonus($id_usuario, $bonus)
+{
+    try{
+        $minhaConexao = Conexao::getConnection();
+
+       
+        $sql = $minhaConexao->prepare("UPDATE usuarios SET bonus = '$bonus' WHERE id_usuario = '$id_usuario'");
+       
+        $sql->execute();
+       
+        
+      
+        return $sql->rowCount();
+    }
+
+    catch(PDOException $e) {
+        return "entrou no catch".$e->getMessage();
+    } 
+}
 }

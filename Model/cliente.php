@@ -63,6 +63,10 @@ class Cliente{
         $novoCliente = new clienteDAO();
         return $novoCliente->logar($cpf, $senha);
     }
+    public function gerarBonus($id_usuario, $bonus){
+        $gerarBonus = new clienteDAO();
+        return $gerarBonus->gerarBonus($id_usuario, $bonus);
+    }
 
 }
 
