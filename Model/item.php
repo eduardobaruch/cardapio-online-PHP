@@ -57,5 +57,10 @@ class Item{
         $novoItem = new ItemDAO();
         return $novoItem->incluir($this);
 }
+
+    public function excluir($id){
+    $novoItem = new ItemDAO();
+    return $novoItem->excluir($this);
+}
 }
 

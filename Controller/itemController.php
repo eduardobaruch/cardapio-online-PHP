@@ -11,6 +11,7 @@ session_start();
 
 
 $acao =  $_POST["acao"];
+$acao2 = $_GET["acao2"];
 require_once "../Model/comida.php";
 require_once "../Model/item.php";
 require_once "../Model/bebida.php";
@@ -118,6 +119,17 @@ else {
     echo '<script type="text/javascript">window.location.href = "../view/consultaProdutos.php";</script>';
     
 }
+}
+
+else if ($acao2=="excluir") {
+
+    $id =  $_GET["id"];
+    $excluirItem = new Item(0, 0, 0, 0, 0);
+    $excluirItem->excluir($id);
+    echo "<script>alert('Registro deletado com sucesso!');document.location='../view/consultaProdutos.php'</script>";
+
+    
+
 }
 
 

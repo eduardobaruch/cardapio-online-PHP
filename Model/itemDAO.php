@@ -60,6 +60,24 @@ class ItemDAO{
         }
     }
 
+    public function excluir($id){
+
+        try{
+            $minhaConexao = Conexao::getConnection();
+
+            $id = $_GET['id'];
+            $sql = $minhaConexao->prepare("DELETE FROM itens WHERE id_item = '$id'");
+            $sql->execute();
+            
+            return true;
+        }
+    
+        catch(PDOException $e) {
+            return "entrou no catch".$e->getMessage();
+        }
+    }
+
+
 
 
     
