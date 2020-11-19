@@ -9,80 +9,73 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <!-- LINK PARA ICONS -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
-        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <title>EVA Lanches</title>
     <link rel="icon" href="../imagens/icon.png">
 
     <script>
         function validarLogin() {
-            
+
             var s1 = document.forms["formLogin"]["cpf"].value;
-          var s2 = document.forms["formLogin"]["password"].value;
-          
-             if (s1 === '123' && s2 === 'anamaria') {
+            var s2 = document.forms["formLogin"]["password"].value;
+
+            if (s1 === '123' && s2 === 'anamaria') {
                 return true;
-            }
-            else {
-                alert ("Cpf ou senha incorretos");
+            } else {
+                alert("Cpf ou senha incorretos");
                 return false;
             }
-      }
-        
+        }
     </script>
 </head>
 
 <body background="../imagens/hamburgerbg.jpg" style="padding-bottom: 70px;">
-  <!-- NAVBAR -->
-  <?php
+    <!-- NAVBAR -->
+    <?php
     session_start();
-    if(!isset($_SESSION['id_usuario']))
-    {
-       include ('template/menu.php');
-        
+    if (!isset($_SESSION['id_usuario'])) {
+        include('template/menu.php');
+    } else {
+        include('template/menuLogado.php');
     }
-    else 
-    {
-        include ('template/menuLogado.php');
-    }
-        
-?>
+
+    ?>
     <!-- CAROUSEL -->
     <div class="container mt-4">
         <div class="row">
             <div class="col-md-12">
-    <div id="demo" class="carousel slide carousel-fade" data-ride="carousel">
+                <div id="demo" class="carousel slide carousel-fade" data-ride="carousel">
 
-        <!-- Indicators -->
-        <ul class="carousel-indicators">
-          <li data-target="#demo" data-slide-to="0" class="active"></li>
-          <li data-target="#demo" data-slide-to="1"></li>
-          
-        </ul>
-      
-        <!-- The slideshow -->
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img class="rounded" src="../imagens/lanchonete1.jpg" alt="Los Angeles">
-          </div>
-          <div class="carousel-item">
-            <img class="rounded" src="../imagens/lanchonete3.jpg" alt="Chicago">
-          </div>
-         
+                    <!-- Indicators -->
+                    <ul class="carousel-indicators">
+                        <li data-target="#demo" data-slide-to="0" class="active"></li>
+                        <li data-target="#demo" data-slide-to="1"></li>
+
+                    </ul>
+
+                    <!-- The slideshow -->
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="rounded" src="../imagens/lanchonete1.jpg" alt="Los Angeles">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="rounded" src="../imagens/lanchonete3.jpg" alt="Chicago">
+                        </div>
+
+                    </div>
+
+                    <!-- Left and right controls -->
+                    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </a>
+                    <a class="carousel-control-next" href="#demo" data-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </a>
+
+                </div>
+            </div>
         </div>
-      
-        <!-- Left and right controls -->
-        <a class="carousel-control-prev" href="#demo" data-slide="prev">
-          <span class="carousel-control-prev-icon"></span>
-        </a>
-        <a class="carousel-control-next" href="#demo" data-slide="next">
-          <span class="carousel-control-next-icon"></span>
-        </a>
-      
     </div>
-</div>
-</div>
-</div>
 
     <!--SOBRE NÓS-->
     <div class="container card bg-light mt-4">
@@ -103,20 +96,17 @@
                         molho secreto e pão artesanal. Abaixo confiram alguns de nossos destaques, lembrando que todas
                         nossas delícias levem nomes de linguagens de programação.</p>
                     <div class="row articles">
-                        <div class="col-sm-6 col-md-4 item"><a href="#"><img class="img-fluid rounded"
-                                    src="../imagens/cheeseburger3.jpg" /></a>
+                        <div class="col-sm-6 col-md-4 item"><a href="#"><img class="img-fluid rounded" src="../imagens/cheeseburger3.jpg" /></a>
                             <h3 class="text-body">HTML</h3>
                             <p class="description">Mais conhecido como o grande devorador de fome, eleito o melhor pelo
                                 chef.</p>
                         </div>
-                        <div class="col-sm-6 col-md-4 item"><a href="#"><img class="img-fluid rounded"
-                                    src="../imagens/cheeseburger3.jpg" /></a>
+                        <div class="col-sm-6 col-md-4 item"><a href="#"><img class="img-fluid rounded" src="../imagens/cheeseburger3.jpg" /></a>
                             <h3 class="text-body">PHP</h3>
                             <p class="description">Reconhecido pelo grande sabor do seu molho secreto, sucesso entre os
                                 clientes.</p>
                         </div>
-                        <div class="col-sm-6 col-md-4 item"><a href="#"><img class="img-fluid rounded"
-                                    src="../imagens/cheeseburger1.jpg" /></a>
+                        <div class="col-sm-6 col-md-4 item"><a href="#"><img class="img-fluid rounded" src="../imagens/cheeseburger1.jpg" /></a>
                             <h3 class="text-body">Javascript</h3>
                             <p class="description">Para os apaixonados por bacon e queijo, podem pedir que não tem erro.
                             </p>
@@ -143,38 +133,29 @@
                 </div>
                 <div class="row justify-content-center">
                     <div class="col-sm-6 col-lg-4">
-                        <div class="card clean-card text-center"><img class="card-img-top w-100 d-block"
-                                src="../imagens/perfil.jpg" />
+                        <div class="card clean-card text-center"><img class="card-img-top w-100 d-block" src="../imagens/perfil.jpg" />
                             <div class="card-body info">
                                 <h4 class="card-title">Eduardo Baruch</h4>
                                 <p class="card-text text-muted">Especialista em HTML e na chapa dos grandes hamburguers.</p>
-                                <div class="icons"><a href="#"><i class="icon-social-facebook"></i></a><a href="#"><i
-                                            class="icon-social-instagram"></i></a><a href="#"><i
-                                            class="icon-social-twitter"></i></a></div>
+                                <div class="icons"><a href="#"><i class="icon-social-facebook"></i></a><a href="#"><i class="icon-social-instagram"></i></a><a href="#"><i class="icon-social-twitter"></i></a></div>
                             </div>
                         </div>
                     </div>
                     <div class="col-sm-6 col-lg-4">
-                        <div class="card clean-card text-center"><img class="card-img-top w-100 d-block"
-                                src="../imagens/victor.jpg" />
+                        <div class="card clean-card text-center"><img class="card-img-top w-100 d-block" src="../imagens/victor.jpg" />
                             <div class="card-body info">
                                 <h4 class="card-title">Victor Camargo</h4>
                                 <p class="card-text text-muted">CSS e Bootstrap não é problema, faz o milkshake como ninguém.</p>
-                                <div class="icons"><a href="#"><i class="icon-social-facebook"></i></a><a href="#"><i
-                                            class="icon-social-instagram"></i></a><a href="#"><i
-                                            class="icon-social-twitter"></i></a></div>
+                                <div class="icons"><a href="#"><i class="icon-social-facebook"></i></a><a href="#"><i class="icon-social-instagram"></i></a><a href="#"><i class="icon-social-twitter"></i></a></div>
                             </div>
                         </div>
                     </div>
                     <div class="col-sm-6 col-lg-4">
-                        <div class="card clean-card text-center"><img class="card-img-top w-100 d-block"
-                                src="../imagens/acyr.jpg" />
+                        <div class="card clean-card text-center"><img class="card-img-top w-100 d-block" src="../imagens/acyr.jpg" />
                             <div class="card-body info">
                                 <h4 class="card-title">Acyr Felipe</h4>
                                 <p class="card-text text-muted">PHP e MySql ficaram fáceis, o grande Chef da cozinha .</p>
-                                <div class="icons"><a href="#"><i class="icon-social-facebook"></i></a><a href="#"><i
-                                            class="icon-social-instagram"></i></a><a href="#"><i
-                                            class="icon-social-twitter"></i></a></div>
+                                <div class="icons"><a href="#"><i class="icon-social-facebook"></i></a><a href="#"><i class="icon-social-instagram"></i></a><a href="#"><i class="icon-social-twitter"></i></a></div>
                             </div>
                         </div>
                     </div>
@@ -193,10 +174,7 @@
                             <p class="text-center text-muted">A EVA Lanches tem uma localização maravilhosa esperando
                                 por sua visita, confira no mapa abaixo. </p>
                         </div>
-                    </div><iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.1561818383393!2d-38.43582939056383!3d-12.961856083929527!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x9407fe176bd8bc7d!2sUnifacs!5e0!3m2!1spt-BR!2sbr!4v1601474531656!5m2!1spt-BR!2sbr"
-                        width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen=""
-                        aria-hidden="false" tabindex="0"></iframe>
+                    </div><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.1561818383393!2d-38.43582939056383!3d-12.961856083929527!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x9407fe176bd8bc7d!2sUnifacs!5e0!3m2!1spt-BR!2sbr!4v1601474531656!5m2!1spt-BR!2sbr" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                 </div>
             </div>
         </div>

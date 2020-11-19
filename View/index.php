@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(isset($_SESSION['contaId'])){
+if (isset($_SESSION['contaId'])) {
     echo "<script language=javascript>alert( 'Você deve pagar a conta antes de sair!' );</script>";
     echo '<script type="text/javascript">window.location.href = "../view/conta.php";</script>';
     exit;
@@ -8,8 +8,8 @@ if(isset($_SESSION['contaId'])){
 
 unset($_SESSION['contaId']);
 unset($_SESSION['id_usuario']);
-    unset($_SESSION['carrinho']);
-    unset($_SESSION['pedidoId']); 
+unset($_SESSION['carrinho']);
+unset($_SESSION['pedidoId']);
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -22,19 +22,18 @@ unset($_SESSION['id_usuario']);
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <!-- LINK PARA ICONS -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
-        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <title>EVA Lanches</title>
     <link rel="icon" href="../imagens/icon.png">
 
-  
+
 </head>
 
 <body background="../imagens/hamburgerbg.jpg" style="padding-bottom: 70px;">
     <!--NAVBAR-->
-   <?php
-include ('template/menu.php');
-   ?>
+    <?php
+    include('template/menu.php');
+    ?>
 
     <!-- CARDÁPIO -->
     <div class="container mt-3">
@@ -46,7 +45,7 @@ include ('template/menu.php');
 
                 <!-- ITEM 1 COMIDA -->
                 <?php
-                include ('listarComidas.php');
+                include('listarComidas.php');
                 ?>
 
 
@@ -60,10 +59,10 @@ include ('template/menu.php');
 
                 <!-- ITEM 1 BEBIDA -->
                 <?php
-                include ('listarBebidas.php');
+                include('listarBebidas.php');
                 ?>
-                </div>
-            
+            </div>
+
 
             <!-- CARRINHO HEADER -->
             <div class="col-md-4">

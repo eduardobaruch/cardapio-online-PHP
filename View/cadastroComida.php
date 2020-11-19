@@ -1,15 +1,11 @@
 <?php
-    session_start();
-    if($_SESSION['poder'] < 2)
-    {
-        header("location: ../Controller/sair.php");
-        exit;
-    }
-    else 
-    {
-        
-    }
-        
+session_start();
+if ($_SESSION['poder'] < 2) {
+    header("location: ../Controller/sair.php");
+    exit;
+} else {
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -23,8 +19,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <!-- LINK PARA ICONS -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
-        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <title>EVA Lanches</title>
     <link rel="icon" href="../imagens/icon.png">
 </head>
@@ -33,13 +28,10 @@
 
 
     <nav class="navbar navbar-light navbar-expand-md navigation-clean-button bg-warning">
-        <div class="container"><a class="navbar-brand" href="index.php"><img src="../imagens/logo.png" alt="logo"
-                    width="268" height="62"></a>
+        <div class="container"><a class="navbar-brand" href="index.php"><img src="../imagens/logo.png" alt="logo" width="268" height="62"></a>
             <ul class="nav navbar-nav mr-auto justify-content-end">
-                <li class="nav-item dropdown"><a class="dropdown-toggle nav-link active" data-toggle="dropdown"
-                        aria-expanded="false" href="#">Cadastrar Produto </a>
-                    <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation"
-                            href="consultaProdutos.php">Consultar Produtos</a>
+                <li class="nav-item dropdown"><a class="dropdown-toggle nav-link active" data-toggle="dropdown" aria-expanded="false" href="#">Cadastrar Produto </a>
+                    <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="consultaProdutos.php">Consultar Produtos</a>
                 </li>
             </ul>
             <a class="text-body" href="../Controller/sair.php"><strong>Sair</strong> </a>
@@ -57,8 +49,7 @@
                 <div class="container card bg-light mt-1">
                     <div class="input-group mt-2 mb-3">
                         <div class="input-group">
-                            <button class="btn btn-outline-secondary dropdown-toggle" type="button"
-                                data-toggle="dropdown" aria-haspopup="true">Comida</button>
+                            <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true">Comida</button>
                             <div class="dropdown-menu">
                                 <a class="dropdown-item" href="cadastroBebida.php">Bebida</a>
 
@@ -67,14 +58,11 @@
 
                     </div>
                     <form method="POST" action="../Controller/itemController.php">
-                        <div class="form-group"><label for="usrname">Nome da Comida:</label><input class="form-control"
-                                type="text" id="nome" name="nome"></div>
-                        <div class="form-group"><label for="email">Descrição da Comida:</label><input
-                                class="form-control" type="text" id="descricao" name="descricao"/></div>
+                        <div class="form-group"><label for="usrname">Nome da Comida:</label><input class="form-control" type="text" id="nome" name="nome"></div>
+                        <div class="form-group"><label for="email">Descrição da Comida:</label><input class="form-control" type="text" id="descricao" name="descricao" /></div>
                         <div class="input-group">
                             <label for="preco">Preço R$</span>
-                                <input type="number" value="0.00" min="0" step="0.01" data-number-to-fixed="2"
-                                    data-number-stepfactor="100" class="form-control currency" id="c2" name="preco" />
+                                <input type="number" value="0.00" min="0" step="0.01" data-number-to-fixed="2" data-number-stepfactor="100" class="form-control currency" id="c2" name="preco" />
                         </div>
                         <input type="hidden" name="acao" value="cadastrarComida" id="acao">
                         <div class="container">

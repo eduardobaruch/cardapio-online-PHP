@@ -4,7 +4,8 @@ require_once "item.php";
 require_once "comidaDAO.php";
 
 
-class Comida extends Item{
+class Comida extends Item
+{
     private $descricao;
 
     public function __construct($nome, $descricao, $preco)
@@ -14,42 +15,47 @@ class Comida extends Item{
         $this->preco = $preco;
         $this->tipo = "comida";
     }
-  
 
-     //Metodos SET
-     public function setDescricao($string){
+
+    //Metodos SET
+    public function setDescricao($string)
+    {
         return $this->descricao = $string;
     }
-    public function setId($string){
+    public function setId($string)
+    {
         return $this->itemId = $string;
     }
     //Metodos GET
-    public function getDescricao(){
+    public function getDescricao()
+    {
         return $this->descricao;
     }
-    public function getId(){
+    public function getId()
+    {
         return $this->itemId;
     }
-    public function getNome(){
+    public function getNome()
+    {
         return $this->nome;
     }
-    public function getPreco(){
+    public function getPreco()
+    {
         return $this->preco;
     }
-    public function getTipo(){
+    public function getTipo()
+    {
         return $this->tipo;
     }
     //Funcao Cadastrar
-    public function incluir(){
+    public function incluir()
+    {
         $novaComida = new comidaDAO();
         return $novaComida->incluir($this);
-   
+    }
+    public function editar()
+    {
+        $editaComida = new comidaDAO();
+        return $editaComida->editar($this);
+    }
 }
-    public function editar(){
-    $editaComida = new comidaDAO();
-    return $editaComida->editar($this);
-
-}
- 
-}
-

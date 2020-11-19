@@ -22,3 +22,4 @@ if ($acao == "cadastrar") {
         $pedidoPronto->pedidoPronto($id);
         header("location: ../View/cozinha.php");
 }
+?>

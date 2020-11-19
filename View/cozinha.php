@@ -1,15 +1,11 @@
 <?php
-    session_start();
-    if($_SESSION['poder'] < 1)
-    {
-        header("location: ../Controller/sair.php");
-        exit;
-    }
-    else 
-    {
-        
-    }
-        
+session_start();
+if ($_SESSION['poder'] < 1) {
+    header("location: ../Controller/sair.php");
+    exit;
+} else {
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -23,31 +19,28 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <!-- LINK PARA ICONS -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
-        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <title>EVA Lanches - COZINHA</title>
     <link rel="icon" href="../imagens/icon.png">
 </head>
 
 <body background="../imagens/hamburgerbg.jpg" style="padding-bottom: 70px;">
     <script type="text/javascript">
-
-        $(document).ready(function () {
+        $(document).ready(function() {
             $('#exemplomodal').modal('show');
         })
     </script>
 
 
     <nav class="navbar navbar-light navbar-expand-md navigation-clean-button bg-warning">
-        <div class="container"><a class="navbar-brand" href="index.php"><img src="../imagens/logo.png" alt="logo"
-                    width="268" height="62"></a>
-                    <a class="text-body" href="../Controller/sair.php"><strong>Sair</strong> </a>
+        <div class="container"><a class="navbar-brand" href="index.php"><img src="../imagens/logo.png" alt="logo" width="268" height="62"></a>
+            <a class="text-body" href="../Controller/sair.php"><strong>Sair</strong> </a>
 
     </nav>
 
     <?php
-echo "<meta HTTP-EQUIV='refresh' CONTENT='5'>";
-?>
+    echo "<meta HTTP-EQUIV='refresh' CONTENT='5'>";
+    ?>
     <div class="container mt-3">
         <div class="row">
             <div class="col-md-12">
@@ -57,41 +50,8 @@ echo "<meta HTTP-EQUIV='refresh' CONTENT='5'>";
 
                 <!-- PEDIDO 1 -->
                 <?php
-                include ('consultarPedidos.php');
+                include('consultarPedidos.php');
                 ?>
-               
-          
-                <!-- PEDIDO 3 -->
-               <!-- <div class="container card bg-light mt-1">
-                    <div class="row">
-                        <div class="col-md-10">
-                            <h5 class="mt-1"><span>1x - </span>Cheeseburguer javascript</h5>
-                            <ul>
-                                <li class="small">Pão branco, 180g de carne, queijo especial, molho picante.</li>
-                            </ul>
-                            <hr>
-                            <h5 class="mt-1"><span>4x - </span>Água Mineral</h5>
-                            <ul>
-                                <li class="small">Garrafa 500ml.</li>
-                            </ul>
-                            <hr>
-                            <h5 class="mt-1"><span>5x - </span>Cheeseburguer HTML</h5>
-                            <ul>
-                                <li class="small">Pão branco, 180g de carne, queijo especial, molho picante.</li>
-                            </ul>
-                            <hr>
-
-
-                        </div>
-                        <div class="col-md-2 my-auto d-flex flex-column">
-                            <h5 class="text-center">Pedido 3</h5>
-                            <h5 class="text-center">Mesa 2</h5>
-                            <button type="button" class="btn btn-warning float-right">Pronto!</button>
-                        </div>
-                    </div>
-                </div> -->
-
-
 
             </div>
         </div>

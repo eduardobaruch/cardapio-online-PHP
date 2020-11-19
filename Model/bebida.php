@@ -4,7 +4,8 @@ require_once "item.php";
 require_once "bebidaDAO.php";
 
 
-class Bebida extends Item{
+class Bebida extends Item
+{
     private $fornecedor;
 
     public function __construct($nome, $fornecedor, $preco)
@@ -14,41 +15,47 @@ class Bebida extends Item{
         $this->preco = $preco;
         $this->tipo = "bebida";
     }
-  
 
-     //Metodos SET
-     public function setFornecedor($string){
+
+    //Metodos SET
+    public function setFornecedor($string)
+    {
         return $this->fornecedor = $string;
     }
-    public function setId($string){
+    public function setId($string)
+    {
         return $this->itemId = $string;
     }
     //Metodos GET
-    public function getFornecedor(){
+    public function getFornecedor()
+    {
         return $this->fornecedor;
     }
-    public function getNome(){
+    public function getNome()
+    {
         return $this->nome;
     }
-    public function getId(){
+    public function getId()
+    {
         return $this->itemId;
     }
-    public function getPreco(){
+    public function getPreco()
+    {
         return $this->preco;
     }
-    public function getTipo(){
+    public function getTipo()
+    {
         return $this->tipo;
     }
     //Funcao Cadastrar
-    public function incluir(){
+    public function incluir()
+    {
         $novaBebida = new BebidaDAO();
         return $novaBebida->incluir($this);
-   
+    }
+    public function editar()
+    {
+        $editaBebida = new bebidaDAO();
+        return $editaBebida->editar($this);
+    }
 }
-    public function editar(){
-    $editaBebida = new bebidaDAO();
-    return $editaBebida->editar($this);
-
-}
-}
-

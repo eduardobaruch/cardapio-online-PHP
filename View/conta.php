@@ -9,28 +9,23 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <!-- LINK PARA ICONS -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
-        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <title>EVA Lanches</title>
     <link rel="icon" href="../imagens/icon.png">
 </head>
 
 <body background="../imagens/hamburgerbg.jpg" style="padding-bottom: 70px;">
 
-   <!-- NAVBAR -->
-   <?php
+    <!-- NAVBAR -->
+    <?php
     session_start();
-    if(!isset($_SESSION['id_usuario']))
-    {
-       include ('template/menu.php');
-        
+    if (!isset($_SESSION['id_usuario'])) {
+        include('template/menu.php');
+    } else {
+        include('template/menuLogado.php');
     }
-    else 
-    {
-        include ('template/menuLogado.php');
-    }
-        
-?>
+
+    ?>
 
 
     <div class="container mt-3">
@@ -42,47 +37,47 @@
 
                 <!-- FORMULARIO -->
                 <div class="container card bg-light mt-1">
-                    
-                           
-                        
-                        <div class="card-body">
-                            
-                            <div class="table-responsive table mt-2" id="dataTable" role="grid" aria-describedby="dataTable_info">
-                                <table class="table my-0" id="dataTable">
-                                    <thead>
-                                        <tr>
-                                            <th>Produto:</th>
-                                            <th>Qtd:</th>
-                                            <th>Preço Unit:</th>
-                                            <th>Valor:</th>
-                                           
-                                        </tr>
-                                    </thead>
-                                    
-                                        
-                                        <?php
-               include ('listarConta.php');
-                ?>
-                                       
-                                   
 
 
-                       
-                                        
-                          
+
+                    <div class="card-body">
+
+                        <div class="table-responsive table mt-2" id="dataTable" role="grid" aria-describedby="dataTable_info">
+                            <table class="table my-0" id="dataTable">
+                                <thead>
+                                    <tr>
+                                        <th>Produto:</th>
+                                        <th>Qtd:</th>
+                                        <th>Preço Unit:</th>
+                                        <th>Valor:</th>
+
+                                    </tr>
+                                </thead>
+
+
+                                <?php
+                                include('listarConta.php');
+                                ?>
+
+
+
+
+
+
+
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-          
-    
-    <!-- Footer -->
-    <footer class="footer fixed-bottom font-small bg-warning mt-2">
-        <!-- Copyright -->
-        <div class="footer-copyright text-center py-3 font-weight-bold">Criado por Eduardo, Victor e Alcyr. © 2020
-            Copyright: EVA Lanches</div>
-    </footer>
+
+
+        <!-- Footer -->
+        <footer class="footer fixed-bottom font-small bg-warning mt-2">
+            <!-- Copyright -->
+            <div class="footer-copyright text-center py-3 font-weight-bold">Criado por Eduardo, Victor e Alcyr. © 2020
+                Copyright: EVA Lanches</div>
+        </footer>
 
 
 </body>
