@@ -35,15 +35,15 @@ if(!isset($_SESSION['contaId']))
 }
 
 else if ($acao=="pagar") {
-    
+
+$valorFinal =  $_GET["valorFinal"];
 $id =  $_GET["contaId"];
-$contaPaga = new Conta($id, 0);
+$contaPaga = new Conta($id, $valorFinal);
+$contaPaga->pagarConta($id, $valorFinal);
 
-$contaPaga->pagarConta($id);
 
-session_start();
-unset($_SESSION['contaId']);
-header("location: ../View/logado.php");
+
+header("location: ../Controller/sair.php");
 
 }
  

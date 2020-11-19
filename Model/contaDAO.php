@@ -53,17 +53,18 @@ class ContaDAO{
         } 
 }
 
-public function pagarConta($contaId)
+public function pagarConta($contaId, $valorFinal)
 {
     try{
         $minhaConexao = Conexao::getConnection();
 
        
-        $sql = $minhaConexao->prepare("UPDATE conta SET status = 1 WHERE id_conta = '$contaId'");
+        $sql = $minhaConexao->prepare("UPDATE conta SET status = 1, valorConta = '$valorFinal'  WHERE id_conta = '$contaId'");
        
         $sql->execute();
        
-        
+        session_start();
+        unset($_SESSION['contaId']); 
       
         return $sql->rowCount();
     }

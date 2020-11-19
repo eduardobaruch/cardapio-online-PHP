@@ -6,6 +6,7 @@
         unset($_SESSION['carrinho']);
         unset($_SESSION['pedidoId']); 
         unset($_SESSION['contaId']); 
+        unset($_SESSION['bonus']);
         header("location: ../view/index.php");
        
     }

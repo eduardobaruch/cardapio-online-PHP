@@ -29,10 +29,28 @@ include_once("../Model/conexao.php");
                 ?>
                 <tbody>
                 <tr>
+                    <?php $valorFinal = $valorConta - $_SESSION['bonus']?>
+                                            <td></td>
+                                            <td></td>
+                                            <td><strong></strong></td>
+                                            <td ><strong>R$<?php echo number_format($valorConta, 2, ',', '.') ?></strong></td>
+                                            
+                                          
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td><strong>Bonus:</strong></td>
+                                            <td><strong>-<?php echo number_format($_SESSION['bonus'], 2, ',', '.') ?></strong></td>
+                                            
+                                          
+                                        </tr>
+                                        <tr>
                                             <td></td>
                                             <td></td>
                                             <td><strong>TOTAL:</strong></td>
-                                            <td><strong><?php echo $valorConta ?></strong></td>
+                                            <td ><strong>R$<?php echo number_format($valorFinal, 2, ',', '.') ?></strong></td>
+                                            
                                           
                                         </tr>
 
@@ -46,7 +64,7 @@ include_once("../Model/conexao.php");
                                        <button type="button" class="btn btn-warning btn-block mt-1 mb-3"><a class="text-body" href="logado.php">Voltar para cardápio</a></button>
                                    </div>
                                    <div class="col-md-4 button">
-                                       <button onclick="alert('Conta paga! Obrigado pela sua visita, volte sempre!')" class="btn btn-warning btn-block mt-1 mb-3"><a class="text-body" href='../Controller/contaController.php?acao=pagar&contaId=<?php echo $contaId?>'>Pagar conta</a></button>
+                                       <button onclick="alert('Conta paga! Obrigado pela sua visita, volte sempre!')" class="btn btn-warning btn-block mt-1 mb-3"><a class="text-body" href='../Controller/contaController.php?acao=pagar&contaId=<?php echo $contaId?>&valorFinal=<?php echo $valorFinal?>'>Pagar conta</a></button>
                                    </div>
                                </div>
                                         
