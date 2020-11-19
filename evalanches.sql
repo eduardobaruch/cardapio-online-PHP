@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 18, 2020 at 08:42 PM
+-- Generation Time: Nov 19, 2020 at 09:21 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.10
 
@@ -44,7 +44,22 @@ INSERT INTO `conta` (`id_conta`, `clienteId`, `valorConta`, `status`) VALUES
 (25, 49, '121.88', 1),
 (26, 49, '15.90', 1),
 (27, 49, '18.90', 1),
-(28, 49, '119.30', 1);
+(28, 49, '119.30', 1),
+(29, 49, '15.90', 1),
+(30, 49, '30.19', 1),
+(31, 49, '56.60', 1),
+(32, 49, '2.00', 1),
+(33, 50, '120.59', 1),
+(34, 50, '23.70', 1),
+(35, 50, '3.50', 1),
+(36, 50, '44.70', 1),
+(37, 50, '7.90', 1),
+(38, 50, '18.40', 1),
+(39, 50, '41.20', 1),
+(40, 50, '11.78', 1),
+(41, 50, '70.82', 1),
+(42, 49, '25.80', 1),
+(43, 49, '34.61', 1);
 
 -- --------------------------------------------------------
 
@@ -70,7 +85,6 @@ INSERT INTO `itens` (`id_item`, `nome`, `preco`, `descricao`, `fornecedor`, `tip
 (14, 'Coca-Cola Lata', '2.99', '', '350ml.  Ambev', 'bebida'),
 (15, 'Hamburguer PHP', '15.90', 'Queijo do bom, pao branco, maionese', '', 'comida'),
 (16, 'Pastel de Frango', '7.90', 'Massa, queijo e frango', '', 'comida'),
-(17, 'Kibe', '18.90', '8 minis kibes de carne', '', 'comida'),
 (18, 'Batata Frita', '14.90', 'Porcao 400g', '', 'comida'),
 (20, 'Suco de Laranja', '6.90', '', '500ml da fruta', 'bebida');
 
@@ -128,7 +142,45 @@ INSERT INTO `itenspedidos` (`itensId`, `nome`, `preco`, `quantidade`, `pedidoId`
 (84, 'Hamburguer PHP', '47.70', 3, 104, '15.90'),
 (85, 'Kibe', '37.80', 2, 105, '18.90'),
 (86, 'Kibe', '18.90', 1, 106, '18.90'),
-(87, 'Batata Frita', '14.90', 1, 106, '14.90');
+(87, 'Batata Frita', '14.90', 1, 106, '14.90'),
+(88, 'Hamburguer PHP', '15.90', 1, 107, '15.90'),
+(89, 'Pastel de Frango', '7.90', 1, 108, '7.90'),
+(90, 'Skol Lata 350ml', '3.50', 1, 109, '3.50'),
+(91, 'Coca-Cola Lata', '2.99', 1, 109, '2.99'),
+(92, 'Pastel de Frango', '15.80', 2, 109, '7.90'),
+(93, 'Hamburguer PHP', '31.80', 2, 110, '15.90'),
+(94, 'Batata Frita', '14.90', 1, 111, '14.90'),
+(95, 'Pastel de Frango', '7.90', 1, 112, '7.90'),
+(96, 'Pastel de Frango', '7.90', 1, 113, '7.90'),
+(97, 'Pastel de Frango', '7.90', 1, 114, '7.90'),
+(98, 'Hamburguer PHP', '15.90', 1, 115, '15.90'),
+(99, 'Batata Frita', '14.90', 1, 116, '14.90'),
+(100, 'Skol Lata 350ml', '3.50', 1, 117, '3.50'),
+(101, 'Coca-Cola Lata', '2.99', 1, 117, '2.99'),
+(102, 'Hamburguer PHP', '15.90', 1, 117, '15.90'),
+(103, 'Pastel de Frango', '15.80', 2, 117, '7.90'),
+(104, 'Batata Frita', '44.70', 3, 117, '14.90'),
+(105, 'Suco de Laranja', '6.90', 1, 117, '6.90'),
+(106, 'Pastel de Frango', '23.70', 3, 118, '7.90'),
+(107, 'Skol Lata 350ml', '3.50', 1, 119, '3.50'),
+(108, 'Batata Frita', '44.70', 3, 120, '14.90'),
+(109, 'Pastel de Frango', '7.90', 1, 121, '7.90'),
+(110, 'Batata Frita', '14.90', 1, 122, '14.90'),
+(111, 'Skol Lata 350ml', '3.50', 1, 123, '3.50'),
+(112, 'Skol Lata 350ml', '3.50', 1, 124, '3.50'),
+(113, 'Pastel de Frango', '7.90', 1, 124, '7.90'),
+(114, 'Batata Frita', '29.80', 2, 124, '14.90'),
+(115, 'Hamburguer PHP', '15.90', 1, 125, '15.90'),
+(116, 'Skol Lata 350ml', '3.50', 1, 126, '3.50'),
+(117, 'Hamburguer PHP', '15.90', 1, 126, '15.90'),
+(118, 'Pastel de Frango', '7.90', 1, 126, '7.90'),
+(119, 'Batata Frita', '44.70', 3, 126, '14.90'),
+(120, 'Hamburguer PHP', '15.90', 1, 127, '15.90'),
+(121, 'Pastel de Frango', '15.80', 2, 127, '7.90'),
+(122, 'Skol Lata 350ml', '3.50', 1, 128, '3.50'),
+(123, 'Coca-Cola Lata', '2.99', 1, 128, '2.99'),
+(124, 'Pastel de Frango', '15.80', 2, 128, '7.90'),
+(125, 'Batata Frita', '14.90', 1, 128, '14.90');
 
 -- --------------------------------------------------------
 
@@ -178,7 +230,29 @@ INSERT INTO `pedidos` (`Id`, `contaId`, `valorTotal`, `status`) VALUES
 (103, 27, '18.90', 1),
 (104, 28, '47.70', 1),
 (105, 28, '37.80', 1),
-(106, 28, '33.80', 1);
+(106, 28, '33.80', 1),
+(107, 29, '15.90', 1),
+(108, 30, '7.90', 1),
+(109, 30, '22.29', 1),
+(110, 31, '31.80', 1),
+(111, 31, '14.90', 1),
+(112, 31, '7.90', 1),
+(113, 31, '7.90', 1),
+(114, 32, '7.90', 1),
+(115, 33, '15.90', 1),
+(116, 33, '14.90', 1),
+(117, 33, '89.79', 1),
+(118, 34, '23.70', 1),
+(119, 35, '3.50', 1),
+(120, 36, '44.70', 1),
+(121, 37, '7.90', 1),
+(122, 38, '14.90', 1),
+(123, 38, '3.50', 1),
+(124, 39, '41.20', 1),
+(125, 40, '15.90', 1),
+(126, 41, '72.00', 1),
+(127, 42, '31.70', 1),
+(128, 43, '37.19', 1);
 
 -- --------------------------------------------------------
 
@@ -191,7 +265,7 @@ CREATE TABLE `usuarios` (
   `nome` varchar(30) DEFAULT NULL,
   `cpf` varchar(11) DEFAULT NULL,
   `email` varchar(40) DEFAULT NULL,
-  `bonus` int(11) DEFAULT 0,
+  `bonus` decimal(11,2) DEFAULT 0.00,
   `senha` varchar(32) DEFAULT NULL,
   `poder` int(11) DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -201,14 +275,14 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id_usuario`, `nome`, `cpf`, `email`, `bonus`, `senha`, `poder`) VALUES
-(49, 'Eduardo Baruch Meireles', '1', 'eduardo_baruch@hotmail.com', 30, 'c4ca4238a0b923820dcc509a6f75849b', 0),
-(50, 'Carina', '2', '1@1.com', 0, 'c81e728d9d4c2f636f067f89cc14862c', 0),
-(51, 'gerente', 'gerente', 'gerente@evalanches.com.br', 0, 'd7403066713e9d99bcc97a8db69bfb67', 2),
-(52, 'cozinha', 'cozinha', 'cozinha@evalanches.com.br', 0, 'b2c8d9b2d257dc40f04aff245a364cd8', 1),
-(53, 'Linco', '1234', 'linco@gmail.com', 0, 'c4ca4238a0b923820dcc509a6f75849b', 0),
-(54, 'Pedro Santos', '051151', 'teste@teste', 0, '814f06ab7f40b2cff77f2c7bdffd3415', 0),
-(55, 'Teste do testador', '5', '5@d', 0, 'e4da3b7fbbce2345d7772b0674a318d5', 0),
-(56, 'oioi', '55', '55@f', 0, 'b53b3a3d6ab90ce0268229151c9bde11', 0);
+(49, 'Eduardo Baruch Meireles', '1', 'eduardo_baruch@hotmail.com', '3.46', 'c4ca4238a0b923820dcc509a6f75849b', 0),
+(50, 'Carina', '2', '1@1.com', '7.08', 'c81e728d9d4c2f636f067f89cc14862c', 0),
+(51, 'gerente', 'gerente', 'gerente@evalanches.com.br', '0.00', 'd7403066713e9d99bcc97a8db69bfb67', 2),
+(52, 'cozinha', 'cozinha', 'cozinha@evalanches.com.br', '0.00', 'b2c8d9b2d257dc40f04aff245a364cd8', 1),
+(53, 'Linco', '1234', 'linco@gmail.com', '0.00', 'c4ca4238a0b923820dcc509a6f75849b', 0),
+(54, 'Pedro Santos', '051151', 'teste@teste', '0.00', '814f06ab7f40b2cff77f2c7bdffd3415', 0),
+(55, 'Teste do testador', '5', '5@d', '0.00', 'e4da3b7fbbce2345d7772b0674a318d5', 0),
+(56, 'oioi', '55', '55@f', '0.00', 'b53b3a3d6ab90ce0268229151c9bde11', 0);
 
 --
 -- Indexes for dumped tables
@@ -252,25 +326,25 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT for table `conta`
 --
 ALTER TABLE `conta`
-  MODIFY `id_conta` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `id_conta` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
 
 --
 -- AUTO_INCREMENT for table `itens`
 --
 ALTER TABLE `itens`
-  MODIFY `id_item` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id_item` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT for table `itenspedidos`
 --
 ALTER TABLE `itenspedidos`
-  MODIFY `itensId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=88;
+  MODIFY `itensId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=126;
 
 --
 -- AUTO_INCREMENT for table `pedidos`
 --
 ALTER TABLE `pedidos`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=107;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=129;
 
 --
 -- AUTO_INCREMENT for table `usuarios`
