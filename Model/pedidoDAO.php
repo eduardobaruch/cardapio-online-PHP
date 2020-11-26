@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once "conexao.php";
 
 
@@ -22,7 +23,7 @@ class PedidoDAO
             $sql->execute();
             $id = $minhaConexao->lastInsertId();
 
-            session_start();
+            
             $_SESSION['pedidoId'] = $id;
 
             return $sql->rowCount();

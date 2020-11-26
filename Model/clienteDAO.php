@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once "conexao.php";
 
 
@@ -54,7 +55,7 @@ class ClienteDAO
                 $result = $sql->setFetchMode(PDO::FETCH_ASSOC);
 
 
-                session_start();
+                
                 while ($linha = $sql->fetch(PDO::FETCH_ASSOC)) {
                     $_SESSION['id_usuario'] = $linha['id_usuario'];
                     $_SESSION['nome'] = $linha['nome'];

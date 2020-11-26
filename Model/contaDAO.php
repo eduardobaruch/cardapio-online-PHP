@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once "conexao.php";
 
 
@@ -61,7 +62,7 @@ class ContaDAO
 
             $sql->execute();
 
-            session_start();
+            
             unset($_SESSION['contaId']);
 
             return $sql->rowCount();

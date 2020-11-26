@@ -28,7 +28,7 @@ if ((!isset($_SESSION['id_usuario'])) || ($_SESSION['poder'] < 2)) {
 
 
     <nav class="navbar navbar-light navbar-expand-md navigation-clean-button bg-warning">
-        <div class="container"><a class="navbar-brand" href="index.html"><img src="../imagens/logo.png" alt="logo" width="268" height="62"></a>
+        <div class="container"><a class="navbar-brand" href="index.php"><img src="../imagens/logo.png" alt="logo" width="268" height="62"></a>
             <ul class="nav navbar-nav mr-auto justify-content-end">
                 <li class="nav-item dropdown"><a class="dropdown-toggle nav-link active" data-toggle="dropdown" aria-expanded="false" href="#">Cadastrar Produto </a>
                     <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="consultaProdutos.php">Consultar Produtos</a>

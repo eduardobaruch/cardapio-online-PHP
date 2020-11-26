@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -20,7 +24,7 @@
 
     <!-- COMIDAS -->
     <?php
-    session_start();
+    
     if (!isset($_SESSION['id_usuario'])) {
         include('template/menu.php');
     } else {

@@ -1,8 +1,6 @@
 <?php
-// Conectando ao banco de dados: 
-include_once("../Model/conexao.php");
-// Criando tabela e cabeçalho de dados:
 
+include_once("../Model/conexao.php");
 
 
 $minhaConexao2 = Conexao::getConnection();
